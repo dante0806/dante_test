@@ -19,12 +19,15 @@ repositories {
 	mavenCentral()
 	maven { url "http://repo.spring.io/libs-milestone" }	
 }
+//Spring Boot Overriding
+//SpringDataJpa가 사용하는 Hibernate의 버전만 5.2.11로 변경해서 사용(LocalDate/LocalDateTime과 Database간 문제해결)
+ext['hibernate.version'] = '5.2.11.Final'
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.projectlombok:lombok')
+	compile('org.projectlombok:lombok:1.16.22')
 	compile('javax.servlet:jstl:1.2')
 	compile('org.springframework.boot:spring-boot-starter-tomcat')	
 	compile('org.apache.tomcat.embed:tomcat-embed-jasper')

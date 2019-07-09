@@ -2,8 +2,56 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <jsp:include page="../template/header.jsp"></jsp:include>
+<style>
+<!--
+.important{	color:#FF0000;		}
+-->
+</style>
 <html class="no-js">
 <script type="text/javascript">
+//회원등록 
+function go_reg_mem(){
+	if(check_field()){
+		alert("asd");
+	}
+}
+
+//밸리데이션 체크
+function check_field(){	
+	if($("#mem_id").val()==""){
+		alert("아이디를 입력해주세요.");
+		$("#mem_id").focus();
+		return false;	
+	}
+	if($("#mem_nm").val()==""){
+		alert("이름을 입력해주세요.");
+		$("#mem_nm").focus();
+		return false;
+	}
+	if($("#mem_pw").val()==""){
+		alert("비밀번호를 입력해주세요.");
+		$("#mem_pw").focus();
+		return false;
+	}
+	if($("#mem_pw_re").val()==""){
+		alert("비밀번호 확인을 입력해주세요.");
+		$("#mem_pw_re").focus();
+		return false;
+	}
+	if($("#mem_pw").val()!=$("#mem_pw_re").val()){
+		alert("비밀번호가 서로 다릅니다. 비밀번호를 확인해주세요.");
+		$("#mem_pw_re").focus();
+		return false;
+	}
+	if(!$("#check_agree").is(":checked")){
+		alert("개인정보 수집·이용에 동의해주세요.");
+		$("#check_agree").focus();
+		return false;
+	}
+	return true;
+}
+
+
 
 </script>	
     <body>
@@ -52,46 +100,77 @@
                                 <div class="space-sep20"></div>
                             </div>            
                         </div>
+                       	<div class="col-md-6 col-sm-6 centered" style="text-align: right; margin-bottom: 5px;">
+                       		<span class="important"> * </span>는 필수입력사항 입니다.
+                       	</div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6 centered">
                                 <div class="classic-form">
                                     <form class="form-horizontal" role="form" novalidate>
                                     	<div class="form-group">
-                                            <label for="id" class="col-sm-3 control-label">아이디</label>
+                                            <label for="mem_id" class="col-sm-3 control-label"><span class="important"> * </span>아이디</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="id" name="id" placeholder="아이디">
+                                                <input type="text" class="form-control" id="mem_id" name="mem_id" placeholder="아이디">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="name" class="col-sm-3 control-label">이름</label>
+                                            <label for="mem_nm" class="col-sm-3 control-label"><span class="important"> * </span>이름</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="name" placeholder="이름">
+                                                <input type="text" class="form-control" id="mem_nm" placeholder="이름">
                                             </div>
                                         </div>                                        
                                         <div class="form-group">
-                                            <label for="password" class="col-sm-3 control-label">비밀번호</label>
+                                            <label for="mem_pw" class="col-sm-3 control-label"><span class="important"> * </span>비밀번호</label>
                                             <div class="col-sm-9">
-                                                <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호">
+                                                <input type="password" class="form-control" id="mem_pw" name="mem_pw" placeholder="비밀번호">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="rptpassword" class="col-sm-3 control-label">비밀번호 확인</label>
+                                            <label for="mem_pw_re" class="col-sm-3 control-label"><span class="important"> * </span>비밀번호 확인</label>
                                             <div class="col-sm-9">
-                                                <input type="password" class="form-control" id="rptpassword" placeholder="비밀번호 확인">
+                                                <input type="password" class="form-control" id="mem_pw_re" placeholder="비밀번호 확인">
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 0;">
+                                            <label for="mem_addr" class="col-sm-3 control-label">주소</label>
+                                            <div class="col-sm-4">
+                                            	<input type="button" value="우편번호 찾기">
+                                            </div>
+                                            <div class="col-sm-1"></div>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="mem_addr" placeholder="우편번호" disabled="disabled">
+                                            </div>
+                                       	</div>
+										<div class="form-group" style="margin-bottom: 5px;">	
+                                            <div class="col-sm-3"></div>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="mem_addr" placeholder="우편번호 찾기 사용" disabled="disabled">
+                                            </div>
+                                        </div>    
+                                        <div class="form-group">    
+                                            <div class="col-sm-3"></div>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="mem_addr" placeholder="나머지주소">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mem_phone" class="col-sm-3 control-label">연락처</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="mem_phone" placeholder="연락처">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-9">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox"><a href="#" class="skin-text">개인정보 수집·이용</a>에 동의합니다.
+                                                        <input type="checkbox" id="check_agree"><a href="#" class="skin-text">개인정보 수집·이용</a>에 동의합니다.
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-9">
-                                                <button type="submit" class="btn btn-block btn-primary">회원가입</button>
+                                                <button type="button" class="btn btn-block btn-primary" onclick="go_reg_mem();">회원가입</button>
                                             </div>
                                         </div>
                                     </form>                    

@@ -7,15 +7,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.dante.main.domain.common.BaseTimeEntity;
+
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED) 
 @Getter
 @Entity
-public class Member {
+public class Member extends BaseTimeEntity{
 
 	@Id
 	@GeneratedValue
@@ -58,10 +60,6 @@ public class Member {
 	@Column(length = 1, nullable=false)
 	private String use_yn;
 	
-	private Date reg_dt;
-	
-	private Date end_dt;
-	
 	private Date access_dt;
 	
 	@Builder
@@ -80,8 +78,6 @@ public class Member {
 		this.mem_auth3 = mem_auth3;
 		this.mem_img = mem_img;
 		this.use_yn = use_yn;
-		this.reg_dt = reg_dt;
-		this.end_dt = end_dt;
 		this.access_dt = access_dt;
 		
 	}

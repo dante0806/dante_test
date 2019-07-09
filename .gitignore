@@ -1,9 +1,10 @@
 HELP.md
 .gradle
-build/
+/build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
+/out
 
 ### STS ###
 .apt_generated
@@ -23,6 +24,7 @@ out/
 
 ### NetBeans ###
 /nbproject/private/
+/build/
 /nbbuild/
 /dist/
 /nbdist/
