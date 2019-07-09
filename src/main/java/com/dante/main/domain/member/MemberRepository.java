@@ -1,4 +1,4 @@
-package com.dante.domain.member;
+package com.dante.main.domain.member;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

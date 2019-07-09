@@ -1,4 +1,4 @@
-package com.dante.domain.member;
+package com.dante.main.domain.member;
 
 import java.sql.Date;
 
@@ -19,11 +19,17 @@ public class Member {
 
 	@Id
 	@GeneratedValue
+	@Column(length = 10, nullable=false)
+	private Long mem_seq;
+	
 	@Column(length = 50, nullable=false)
 	private String mem_id;
 	
 	@Column(length = 150, nullable=false)
 	private String mem_pw;
+	
+	@Column(length = 50, nullable=false)
+	private String mem_nm;
 	
 	@Column(length = 20, nullable=false)
 	private String mem_phone;
@@ -59,11 +65,12 @@ public class Member {
 	private Date access_dt;
 	
 	@Builder
-	public Member(String mem_id, String mem_pw, String mem_phone, String mem_zip, String mem_addr, String mem_type, 
+	public Member(String mem_id, String mem_pw, String mem_nm, String mem_phone, String mem_zip, String mem_addr, String mem_type, 
 							 String mem_auth1, String mem_auth2, String mem_auth3, String mem_img, String use_yn, 
 							 Date reg_dt, Date end_dt, Date access_dt){
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
+		this.mem_nm = mem_nm;
 		this.mem_phone = mem_phone;
 		this.mem_zip = mem_zip;
 		this.mem_addr = mem_addr;

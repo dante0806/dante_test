@@ -1,0 +1,16 @@
+#SPRING MVC SETTINGS
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  h2:
+    console:
+      enabled: true      
+      
+#jsp.. immediately
+server:
+  servlet:
+    jsp:
+      init-parameters:  
+        development:  true 
