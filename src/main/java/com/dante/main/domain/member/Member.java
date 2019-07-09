@@ -33,7 +33,7 @@ public class Member extends BaseTimeEntity{
 	@Column(length = 50, nullable=false)
 	private String mem_nm;
 	
-	@Column(length = 20, nullable=false)
+	@Column(length = 20)
 	private String mem_phone;
 	
 	@Column(length = 8)
@@ -64,8 +64,7 @@ public class Member extends BaseTimeEntity{
 	
 	@Builder
 	public Member(String mem_id, String mem_pw, String mem_nm, String mem_phone, String mem_zip, String mem_addr, String mem_type, 
-							 String mem_auth1, String mem_auth2, String mem_auth3, String mem_img, String use_yn, 
-							 Date reg_dt, Date end_dt, Date access_dt){
+							 String mem_auth1, String mem_auth2, String mem_auth3, String mem_img, String use_yn, Date access_dt){
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
 		this.mem_nm = mem_nm;

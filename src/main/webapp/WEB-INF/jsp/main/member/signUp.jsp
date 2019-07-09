@@ -9,50 +9,6 @@
 </style>
 <html class="no-js">
 <script type="text/javascript">
-//회원등록 
-function go_reg_mem(){
-	if(check_field()){
-		alert("asd");
-	}
-}
-
-//밸리데이션 체크
-function check_field(){	
-	if($("#mem_id").val()==""){
-		alert("아이디를 입력해주세요.");
-		$("#mem_id").focus();
-		return false;	
-	}
-	if($("#mem_nm").val()==""){
-		alert("이름을 입력해주세요.");
-		$("#mem_nm").focus();
-		return false;
-	}
-	if($("#mem_pw").val()==""){
-		alert("비밀번호를 입력해주세요.");
-		$("#mem_pw").focus();
-		return false;
-	}
-	if($("#mem_pw_re").val()==""){
-		alert("비밀번호 확인을 입력해주세요.");
-		$("#mem_pw_re").focus();
-		return false;
-	}
-	if($("#mem_pw").val()!=$("#mem_pw_re").val()){
-		alert("비밀번호가 서로 다릅니다. 비밀번호를 확인해주세요.");
-		$("#mem_pw_re").focus();
-		return false;
-	}
-	if(!$("#check_agree").is(":checked")){
-		alert("개인정보 수집·이용에 동의해주세요.");
-		$("#check_agree").focus();
-		return false;
-	}
-	return true;
-}
-
-
-
 </script>	
     <body>
         <div id="wrapper"  >
@@ -138,13 +94,13 @@ function check_field(){
                                             </div>
                                             <div class="col-sm-1"></div>
                                             <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="mem_addr" placeholder="우편번호" disabled="disabled">
+                                                <input type="text" class="form-control" placeholder="우편번호" disabled="disabled">
                                             </div>
                                        	</div>
 										<div class="form-group" style="margin-bottom: 5px;">	
                                             <div class="col-sm-3"></div>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="mem_addr" placeholder="우편번호 찾기 사용" disabled="disabled">
+                                                <input type="text" class="form-control" placeholder="우편번호 찾기 사용" disabled="disabled">
                                             </div>
                                         </div>    
                                         <div class="form-group">    
@@ -170,7 +126,7 @@ function check_field(){
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-9">
-                                                <button type="button" class="btn btn-block btn-primary" onclick="go_reg_mem();">회원가입</button>
+                                                <button type="button" class="btn btn-block btn-primary" id="reg_member">회원가입</button>
                                             </div>
                                         </div>
                                     </form>                    
@@ -181,6 +137,7 @@ function check_field(){
                 </div>
             </div><!--.content-wrapper end -->
 		</div>
+	    <script src="/js/main/member.js"></script>
     </body>
 </html>
 <jsp:include page="../template/footer.jsp"></jsp:include>

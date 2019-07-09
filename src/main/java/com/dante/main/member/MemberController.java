@@ -17,6 +17,8 @@ public class MemberController {
 
 	private MemberRepository memberRepository;
 	
+	private MemberService memberService;
+	
 	//로그인 페이지
 	@GetMapping("/login")
 	public ModelAndView  ViewLoginPage(){
@@ -36,8 +38,9 @@ public class MemberController {
 	}
 	
 	@PostMapping("/regMember")
-	public void regMember(@RequestBody MemberDto dto){
-		memberRepository.save(dto.toEntity());
+	public Long regMember(@RequestBody MemberDto dto){
+	//	memberRepository.save(dto.toEntity());
+		return memberService.save(dto);
 	}
 	
 	
