@@ -9,7 +9,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 public class DanteApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DanteApplication.class, args);
+	//	SpringApplication.run(DanteApplication.class, args);
+		SpringApplication app = new SpringApplication(DanteApplication.class);
+		
+		app.run(args);
 	}
 
 }

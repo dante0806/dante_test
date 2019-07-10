@@ -20,53 +20,51 @@ import lombok.NoArgsConstructor;
 public class Member extends BaseTimeEntity{
 
 	@Id
+	@Column(nullable=false)
+	private String logingId;
+	
 	@GeneratedValue
-	@Column(length = 10, nullable=false)
+	@Column(nullable=false)
 	private Long mem_seq;
 	
-	@Column(length = 50, nullable=false)
-	private String mem_id;
+	@Column(nullable=false)
+	private String username;
 	
-	@Column(length = 150, nullable=false)
-	private String mem_pw;
+	@Column(nullable=false)
+	private String password;
 	
-	@Column(length = 50, nullable=false)
+	@Column(nullable=false)
 	private String mem_nm;
 	
-	@Column(length = 20)
 	private String mem_phone;
 	
-	@Column(length = 8)
 	private String mem_zip;
-	
-	@Column(length = 200)	
+		
 	private String mem_addr;
 	
-	@Column(length = 10, nullable=false)
+	@Column(nullable=false)
 	private String mem_type;
 	
-	@Column(length = 10, nullable=false)
+	@Column(nullable=false)
 	private String mem_auth1;
 	
-	@Column(length = 10)
 	private String mem_auth2;
 	
-	@Column(length = 10)
 	private String mem_auth3;
 	
-	@Column(length = 200)
 	private String mem_img;
 	
-	@Column(length = 1, nullable=false)
+	@Column(nullable=false)
 	private String use_yn;
 	
 	private Date access_dt;
 	
 	@Builder
-	public Member(String mem_id, String mem_pw, String mem_nm, String mem_phone, String mem_zip, String mem_addr, String mem_type, 
+	public Member(String logingId, String username, String password, String mem_nm, String mem_phone, String mem_zip, String mem_addr, String mem_type, 
 							 String mem_auth1, String mem_auth2, String mem_auth3, String mem_img, String use_yn, Date access_dt){
-		this.mem_id = mem_id;
-		this.mem_pw = mem_pw;
+		this.logingId = logingId;
+		this.username = username;
+		this.password = password;
 		this.mem_nm = mem_nm;
 		this.mem_phone = mem_phone;
 		this.mem_zip = mem_zip;

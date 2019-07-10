@@ -9,8 +9,8 @@ var signup = {
     },
     save : function () {
         var data = {
-            mem_id: $('#mem_id').val(),
-            mem_pw: $('#mem_pw').val(),
+            username: $('#mem_id').val(),
+            password: $('#mem_pw').val(),
             mem_nm: $('#mem_nm').val(),
             mem_addr: $('#mem_addr').val(),
             mem_phone: $('#mem_phone').val(),

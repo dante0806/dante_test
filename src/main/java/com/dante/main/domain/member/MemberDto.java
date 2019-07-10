@@ -12,8 +12,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class MemberDto {
 
-	private String mem_id;
-	private String mem_pw;
+	private String logingId;
+	private String username;
+	private String password;
 	private String mem_nm;
 	private String mem_phone;
 	private String mem_zip;
@@ -27,10 +28,11 @@ public class MemberDto {
 	private Date access_dt;
 	
 	@Builder
-	public MemberDto(String mem_id, String mem_pw, String mem_nm, String mem_phone, String mem_zip, String mem_addr, String mem_type, 
+	public MemberDto(String logingId, String username, String password, String mem_nm, String mem_phone, String mem_zip, String mem_addr, String mem_type, 
 							 String mem_auth1, String mem_auth2, String mem_auth3, String mem_img, String use_yn, Date access_dt){
-		this.mem_id = mem_id;
-		this.mem_pw = mem_pw;
+		this.logingId = logingId;
+		this.username = username;
+		this.password = password;
 		this.mem_nm = mem_nm;
 		this.mem_phone = mem_phone;
 		this.mem_zip = mem_zip;
@@ -44,10 +46,11 @@ public class MemberDto {
 	}
 	
 	public Member toEntity(){
-		System.out.println("asdads11");
+		
 		return Member.builder()
-				.mem_id(mem_id)
-				.mem_pw(mem_pw)
+				.logingId(logingId)
+				.username(username)
+				.password(password)
 				.mem_nm(mem_nm)
 				.mem_phone(mem_phone)
 				.mem_zip(mem_zip)

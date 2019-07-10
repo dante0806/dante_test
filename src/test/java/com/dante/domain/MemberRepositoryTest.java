@@ -35,7 +35,7 @@ public class MemberRepositoryTest {
 	public void test_reg_mem(){
 		//given
 		memberRepository.save(Member.builder()
-				.mem_id("dante0806")
+				.username("dante0806")
 				.build());
 		
 		//when
@@ -43,7 +43,7 @@ public class MemberRepositoryTest {
 		
 		//then
 		Member member = memberList.get(0);
-		assertThat(member.getMem_id(), is("dante0806"));
+		assertThat(member.getUsername(), is("dante0806"));
 	}
 	
 }

@@ -16,7 +16,6 @@ import lombok.AllArgsConstructor;
 public class MemberController {
 
 	private MemberRepository memberRepository;
-	
 	private MemberService memberService;
 	
 	//로그인 페이지
