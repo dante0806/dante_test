@@ -1,4 +1,4 @@
-package com.dante.main.member;
+package com.dante.main.user;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,17 +13,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.dante.main.domain.member.MemberDto;
-import com.dante.main.domain.member.MemberRepository;
+import com.dante.main.domain.user.UserRepository;
 
 import lombok.AllArgsConstructor;
 
 @RestController
 @AllArgsConstructor
-public class MemberController {
+public class UserController {
 
-	private MemberRepository memberRepository;
-	private MemberService memberService;
+	private UserRepository userRepository;
+	private UserService userService;
 	
 	//로그인 페이지
 	@GetMapping("/login")
@@ -43,11 +42,11 @@ public class MemberController {
 		return mv;
 	}
 	
-	@PostMapping("/regMember")
+	/*@PostMapping("/regMember")
 	public Long regMember(@RequestBody MemberDto dto){
 	//	memberRepository.save(dto.toEntity());
 		return memberService.save(dto);
-	}
+	}*/
 	
 	//VV아래부터는 테스트
 	@RequestMapping(value="/main")
