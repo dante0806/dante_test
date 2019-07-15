@@ -2,6 +2,8 @@ package com.dante.main.user;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.dante.main.domain.user.User;
+import com.dante.main.domain.user.UserDto;
+import com.dante.main.security.SecurityService;
 import com.dante.main.domain.user.UserRepository;
 
 import lombok.AllArgsConstructor;
@@ -20,9 +25,15 @@ import lombok.AllArgsConstructor;
 @RestController
 @AllArgsConstructor
 public class UserController {
-
+	
+	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private SecurityService securityService;
 	
 	//로그인 페이지
 	@GetMapping("/login")
@@ -55,13 +66,14 @@ public class UserController {
 	}
 	  
 	// 로그인 
-	@RequestMapping("/login")
+	/*@RequestMapping(value="/loginProcess")
 	public String login(Model model, String error, String logout, HttpServletRequest request ){
+		System.out.println("logout >> " + logout);
 		if (logout != null){
 			model.addAttribute("logout", "You have been logged out successfully.");
 		}
-		return "login";
-	}
+		return "goLogin";
+	}*/
 	  
 	// 로그인 실패시
 	@RequestMapping(value="/loginError")
@@ -74,7 +86,7 @@ public class UserController {
 	// 회원가입폼 
 	@RequestMapping(value="/registration",method=RequestMethod.GET)
 	public String registration(Model model){
-		model.addAttribute("userForm", new User());
+		model.addAttribute("userForm", new UserDto());
 		return "registration";
 	}
   
@@ -87,7 +99,14 @@ public class UserController {
 		securityService.autologin(userForm.getUsername(),password);
 		return "redirect:/main";
 	}
-  
+	
+	/*public Long regMember(@RequestBody MemberDto dto){
+		//	memberRepository.save(dto.toEntity());
+			return memberService.save(dto);
+		}*/
+	
+	
+	
 	// admin 사용자 테스트 
 	@RequestMapping("/admin")
 	public String admin(){

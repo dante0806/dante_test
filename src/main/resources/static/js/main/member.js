@@ -1,27 +1,30 @@
 var signup = {
     init : function () {
         var _this = this;
+        alert("asda");
         $('#reg_member').on('click', function () {
         	if(check_field()){
-        		_this.save();
+        		$("#regUserForm").submit();
+        		//_this.save();
         	}
         });
     },
     save : function () {
-        var data = {
-            username: $('#mem_id').val(),
-            password: $('#mem_pw').val(),
-            mem_nm: $('#mem_nm').val(),
-            mem_addr: $('#mem_addr').val(),
-            mem_phone: $('#mem_phone').val(),
-            mem_auth1: "1",
-            mem_type:"1",
+    	
+        /*var data = {
+            username: $('#username').val(),
+            password: $('#password').val(),
+            user_nm: $('#user_nm').val(),
+            user_addr: $('#user_addr').val(),
+            user_phone: $('#user_phone').val(),
+            roles:"USER",
             use_yn:"Y"
-        };
+        };*/
 
-        $.ajax({
+        /*$.ajax({
             type: 'POST',
-            url: '/regMember',
+           // url: '/regMember',
+            url: '/registration',
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
@@ -31,7 +34,7 @@ var signup = {
         }).fail(function (error) {
         	alert("에러발생! 관리자에게 문의하세요.");
             alert(data);
-        });
+        });*/
     }
 
 };
@@ -40,29 +43,29 @@ signup.init();
 
 //밸리데이션 체크
 function check_field(){	
-	if($("#mem_id").val()==""){
+	if($("#username").val()==""){
 		alert("아이디를 입력해주세요.");
-		$("#mem_id").focus();
+		$("#username").focus();
 		return false;	
 	}
-	if($("#mem_nm").val()==""){
+	if($("#user_nm").val()==""){
 		alert("이름을 입력해주세요.");
-		$("#mem_nm").focus();
+		$("#user_nm").focus();
 		return false;
 	}
-	if($("#mem_pw").val()==""){
+	if($("#password").val()==""){
 		alert("비밀번호를 입력해주세요.");
-		$("#mem_pw").focus();
+		$("#password").focus();
 		return false;
 	}
-	if($("#mem_pw_re").val()==""){
+	if($("#password_re").val()==""){
 		alert("비밀번호 확인을 입력해주세요.");
-		$("#mem_pw_re").focus();
+		$("#password_re").focus();
 		return false;
 	}
-	if($("#mem_pw").val()!=$("#mem_pw_re").val()){
+	if($("#password").val()!=$("#password_re").val()){
 		alert("비밀번호가 서로 다릅니다. 비밀번호를 확인해주세요.");
-		$("#mem_pw_re").focus();
+		$("#password_re").focus();
 		return false;
 	}
 	if(!$("#check_agree").is(":checked")){

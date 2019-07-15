@@ -62,33 +62,33 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 centered">
                                 <div class="classic-form">
-                                    <form class="form-horizontal" role="form" novalidate>
+                                    <form class="form-horizontal" role="form" id="regUserForm" action="/registration" method="POST" novalidate>
                                     	<div class="form-group">
-                                            <label for="mem_id" class="col-sm-3 control-label"><span class="important"> * </span>아이디</label>
+                                            <label for="username" class="col-sm-3 control-label"><span class="important"> * </span>아이디</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="mem_id" name="mem_id" placeholder="아이디">
+                                                <input type="text" class="form-control" id="username" name="username" placeholder="아이디">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="mem_nm" class="col-sm-3 control-label"><span class="important"> * </span>이름</label>
+                                            <label for="user_nm" class="col-sm-3 control-label"><span class="important"> * </span>이름</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="mem_nm" placeholder="이름">
+                                                <input type="text" class="form-control" id="user_nm" placeholder="이름">
                                             </div>
                                         </div>                                        
                                         <div class="form-group">
-                                            <label for="mem_pw" class="col-sm-3 control-label"><span class="important"> * </span>비밀번호</label>
+                                            <label for="password" class="col-sm-3 control-label"><span class="important"> * </span>비밀번호</label>
                                             <div class="col-sm-9">
-                                                <input type="password" class="form-control" id="mem_pw" name="mem_pw" placeholder="비밀번호">
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="mem_pw_re" class="col-sm-3 control-label"><span class="important"> * </span>비밀번호 확인</label>
+                                            <label for="password_re" class="col-sm-3 control-label"><span class="important"> * </span>비밀번호 확인</label>
                                             <div class="col-sm-9">
-                                                <input type="password" class="form-control" id="mem_pw_re" placeholder="비밀번호 확인">
+                                                <input type="password" class="form-control" id="password_re" placeholder="비밀번호 확인">
                                             </div>
                                         </div>
                                         <div class="form-group" style="margin-bottom: 0;">
-                                            <label for="mem_addr" class="col-sm-3 control-label">주소</label>
+                                            <label for="user_addr" class="col-sm-3 control-label">주소</label>
                                             <div class="col-sm-4">
                                             	<input type="button" value="우편번호 찾기">
                                             </div>
@@ -106,13 +106,13 @@
                                         <div class="form-group">    
                                             <div class="col-sm-3"></div>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="mem_addr" placeholder="나머지주소">
+                                                <input type="text" class="form-control" id="user_addr" placeholder="나머지주소">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="mem_phone" class="col-sm-3 control-label">연락처</label>
+                                            <label for="user_phone" class="col-sm-3 control-label">연락처</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="mem_phone" placeholder="연락처">
+                                                <input type="text" class="form-control" id="user_phone" placeholder="연락처">
                                             </div>
                                         </div>
                                         <div class="form-group">

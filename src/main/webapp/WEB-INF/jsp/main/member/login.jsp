@@ -29,11 +29,11 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 centered">
                                 <div class="classic-form">
-                                    <form class="form-horizontal" role="form" novalidate>
+                                    <form class="form-horizontal" role="form" action="/loginProcess" method="POST" novalidate>
                                         <div class="form-group">
-                                            <label for="email" class="col-sm-3 control-label">Email</label>
+                                            <label for="username" class="col-sm-3 control-label">Email</label>
                                             <div class="col-sm-9">
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                                <input type="text" class="form-control" id="username" name="username" placeholder="username">
                                             </div>
                                         </div>
                                         <div class="form-group">
