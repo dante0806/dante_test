@@ -1,2 +1,2 @@
-insert into user (id, username, password, user_nm, use_yn) values ('1', 'dante0806', '123', '±è½ÃÀº', ' Y');
-insert into role (id, name) values ('1','ADMIN');
+insert into user (user_id, user_pw, user_nm, use_yn) values ('dante0806', '123', 'ê¹€ì‹œì€', ' Y');
+insert into user_role (user_id, role) values ('dante0806','ROLE_ADMIN');

@@ -1,4 +1,4 @@
-package com.dante.main.user;
+/*package com.dante.main.user;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.dante.main.domain.user.Role;
+import com.dante.main.domain.user.UserRole;
 import com.dante.main.domain.user.User;
 import com.dante.main.domain.user.UserRepository;
 
@@ -25,23 +25,23 @@ public class UserServiceImpl implements UserService{
 	
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
-	/*@Transactional
+	@Transactional
 	public Long save(MemberDto dto){
 		return memberRepository.save(dto.toEntity()).getMem_seq();
-	}*/
+	}
 	
-	/*public Member getLogingId(String logingId){
+	public Member getLogingId(String logingId){
 		return memberRepository.getOne(logingId);
-	}*/
+	}
 
 	@Override
 	public void saveUser(User user, String[] roles) {
-		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-		Set<Role> rolesSet = new HashSet<Role>();
+		user.setUser_pw(bCryptPasswordEncoder.encode(user.getUser_pw()));
+		Set<UserRole> rolesSet = new HashSet<UserRole>();
 		for(String role:roles){
-			rolesSet.add(new Role(role));
+			rolesSet.add(new UserRole(role));
 		}
-		user.setRoles(rolesSet);
+		user.setUserRoles(rolesSet);
 		userRepository.save(user);
 	}
 
@@ -51,3 +51,4 @@ public class UserServiceImpl implements UserService{
 	}
 	
 }
+*/

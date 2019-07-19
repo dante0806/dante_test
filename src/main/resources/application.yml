@@ -7,6 +7,7 @@ spring:
   h2:
     console:
       enabled: true 
+      path: /h2-console
   #datasource:
    # driver-class-name: org.mariadb.jdbc.Driver
     #url: jdbc:mariadb://localhost:8080
@@ -21,14 +22,11 @@ spring:
         format_sql: true
         #dialect: org.hibernate.dialect.MySQLDialect
         #default_schema:
+  datasource: 
+    data: classpath:data-h2.sql
   profiles:
     active: local #기본환경선택
     
-#local환경
-  datasource:
-    data: classpath:data-h2.sql
-      
-      
 #jsp.. immediately
 server:
   servlet:
@@ -37,5 +35,11 @@ server:
         development:  true 
 logging:
   level:
-    root: info
+    root: info 
+    
+#local환경
+
+
+      
+
             

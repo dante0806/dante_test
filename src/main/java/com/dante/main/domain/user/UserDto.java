@@ -1,4 +1,4 @@
-package com.dante.main.domain.user; 
+/*package com.dante.main.domain.user; 
 
 import java.sql.Date;
 
@@ -11,10 +11,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class UserDto {
-
-	private Long id;
-	private String username;
-	private String password;
+	
+	private String user_id;
+	private String user_pw;
 	private String user_nm;
 	private String user_phone;
 	private String user_zip;
@@ -24,11 +23,11 @@ public class UserDto {
 	private Date access_dt;
 	
 	@Builder
-	public UserDto(Long id, String username, String password, String user_nm, String user_phone, String user_zip, String user_addr, 
+	public UserDto(String user_id, String user_pw, String user_nm, String user_phone, String user_zip, String user_addr, 
 								  String user_img, String use_yn, Date access_dt){
-		this.id = id;
-		this.username = username;
-		this.password = password;
+		
+		this.user_id = user_id;
+		this.user_pw = user_pw;
 		this.user_nm = user_nm;
 		this.user_phone = user_phone;
 		this.user_zip = user_zip;
@@ -40,9 +39,8 @@ public class UserDto {
 	public User toEntity(){
 		
 		return User.builder()
-				.id(id)
-				.username(username)
-				.password(password)
+				.user_id(user_id)
+				.user_pw(user_pw)
 				.user_nm(user_nm)
 				.user_phone(user_phone)
 				.user_zip(user_zip)
@@ -52,3 +50,4 @@ public class UserDto {
 				.build();
 	}
 }
+*/
