@@ -62,7 +62,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 centered">
                                 <div class="classic-form">
-                                    <form class="form-horizontal" role="form" id="regUserForm" action="/registration" method="POST" novalidate>
+                                    <form class="form-horizontal" role="form" id="userForm" name="userForm" action="/registration" method="POST" >
                                     	<div class="form-group">
                                             <label for="username" class="col-sm-3 control-label"><span class="important"> * </span>아이디</label>
                                             <div class="col-sm-9">
@@ -80,6 +80,8 @@
                                             <div class="col-sm-9">
                                                 <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호">
                                             </div>
+                                            <div>ADMIN <input type="checkbox" name="roles" value="ADMIN"/> | 
+												  USER  <input type="checkbox" name="roles" value="USER" /></div>
                                         </div>
                                         <div class="form-group">
                                             <label for="password_re" class="col-sm-3 control-label"><span class="important"> * </span>비밀번호 확인</label>
@@ -126,7 +128,8 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-9">
-                                                <button type="button" class="btn btn-block btn-primary" id="reg_member">회원가입</button>
+                                                <!-- <button type="button" class="btn btn-block btn-primary" id="reg_member">회원가입</button> -->
+                                                <input type="submit" class="btn btn-block btn-primary" id="reg_member" value="회원가입">
                                             </div>
                                         </div>
                                     </form>                    
