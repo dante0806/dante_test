@@ -12,11 +12,12 @@ import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
  
 public class CustomAuthenticationSuccess implements AuthenticationSuccessHandler{
-  private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();;
+	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();;
   
-  @Override
-  public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-      Authentication authentication) throws IOException, ServletException {
-      redirectStrategy.sendRedirect(request, response, "/main");
-  }
+	@Override
+	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+			Authentication authentication) throws IOException, ServletException {
+		System.out.println("로그인성공!!");
+		redirectStrategy.sendRedirect(request, response, "/");
+	}
 }

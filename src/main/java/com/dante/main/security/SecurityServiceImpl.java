@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class SecurityServiceImpl implements SecurityService {
-    @Autowired
+	@Autowired
     private UserDetailsService userDetailsService;
  
     @Autowired
@@ -21,7 +21,7 @@ public class SecurityServiceImpl implements SecurityService {
  
     @Override
     public String findLoggedInUsername() {
-        Object userDetails = SecurityContextHolder.getContext().getAuthentication().getDetails();
+    	Object userDetails = SecurityContextHolder.getContext().getAuthentication().getDetails();
         if (userDetails instanceof UserDetails) {
             return ((UserDetails) userDetails).getUsername();
         }

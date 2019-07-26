@@ -16,10 +16,9 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
-  #datasource: 
-    #data: classpath:data-h2.sql
-  profiles:
+  datasource: 
+    data: classpath:data-h2.sql
+  profiles: 
     active: local #기본환경선택
     
 #jsp.. immediately

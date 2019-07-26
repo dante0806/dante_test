@@ -62,7 +62,9 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 centered">
                                 <div class="classic-form">
-                                    <form class="form-horizontal" role="form" id="userForm" name="userForm" action="/registration" method="POST" >
+                                    <form class="form-horizontal" role="form" id="userForm" name="userForm" action="/signUpProcess" method="POST" >
+                                    	<input type="hidden" name="use_yn" value="Y">
+                                    	<input type="hidden" name="roles" value="USER" />
                                     	<div class="form-group">
                                             <label for="username" class="col-sm-3 control-label"><span class="important"> * </span>아이디</label>
                                             <div class="col-sm-9">
@@ -72,7 +74,7 @@
                                         <div class="form-group">
                                             <label for="user_nm" class="col-sm-3 control-label"><span class="important"> * </span>이름</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="user_nm" placeholder="이름">
+                                                <input type="text" class="form-control" id="user_nm" name="user_nm" placeholder="이름">
                                             </div>
                                         </div>                                        
                                         <div class="form-group">
@@ -80,8 +82,6 @@
                                             <div class="col-sm-9">
                                                 <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호">
                                             </div>
-                                            <div>ADMIN <input type="checkbox" name="roles" value="ADMIN"/> | 
-												  USER  <input type="checkbox" name="roles" value="USER" /></div>
                                         </div>
                                         <div class="form-group">
                                             <label for="password_re" class="col-sm-3 control-label"><span class="important"> * </span>비밀번호 확인</label>
@@ -108,13 +108,13 @@
                                         <div class="form-group">    
                                             <div class="col-sm-3"></div>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="user_addr" placeholder="나머지주소">
+                                                <input type="text" class="form-control" id="user_addr" name="user_addr" placeholder="나머지주소">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="user_phone" class="col-sm-3 control-label">연락처</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="user_phone" placeholder="연락처">
+                                                <input type="text" class="form-control" id="user_phone" name="user_phone" placeholder="연락처">
                                             </div>
                                         </div>
                                         <div class="form-group">

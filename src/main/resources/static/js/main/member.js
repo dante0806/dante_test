@@ -1,7 +1,6 @@
 var signup = {
     init : function () {
         var _this = this;
-        alert("asda");
         $('#reg_member').on('click', function () {
         	if(check_field()){
         		$("#regUserForm").submit();

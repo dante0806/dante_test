@@ -15,11 +15,23 @@ public class WebController {
 		ModelAndView mv = new ModelAndView();
 		List<String> listTest = new ArrayList<>();
          
-        /*listTest.add("test1");
+        listTest.add("test1");
         listTest.add("test2");
-        listTest.add("test3");*/
+        listTest.add("test3");
         mv.addObject("listTest",listTest);
         mv.setViewName("index");
 		return mv;
 	}
+	/*@GetMapping(value="/")
+	public String index() {
+		//ModelAndView mv = new ModelAndView();
+		List<String> listTest = new ArrayList<>();
+         
+        listTest.add("test1");
+        listTest.add("test2");
+        listTest.add("test3");
+        //mv.addObject("listTest",listTest);
+        //mv.setViewName("index");
+		return "/index";
+	}*/
 }

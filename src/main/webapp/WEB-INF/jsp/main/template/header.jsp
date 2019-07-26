@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -59,11 +60,12 @@
                                 <!-- //Search Box// -->
                                 <div class="social-icons">
                                     <ul>
+                                   	<sec:authorize access="isAnonymous()">
                                     	<li>
-                                            <a href="/signUp">회원가입</a>
+                                            <a href="/signUp" style="margin-right: 15px;">회원가입</a>
                                         </li>
                                     	<li>
-                                            <a href="/login">로그인</a>
+                                            <a href="/login" style="margin-right: 15px;">로그인</a>
                                         </li>
                                         <li>
                                             <a href="#" target="_blank" class="social-media-icon facebook-icon" data-original-title="facebook">facebook</a>
@@ -71,6 +73,20 @@
                                         <li>
                                             <a href="#" target="_blank" class="social-media-icon googleplus-icon" data-original-title="googleplus">googleplus</a>
                                         </li>
+                                    </sec:authorize>
+                                    <sec:authorize access="isAuthenticated()">
+                                    	<li>
+                                            <a href="/logout" style="margin-right: 15px;">로그아웃</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="margin-right: 15px;">회원정보</a>
+                                        </li>
+                                       	<li>
+											<span  style="margin-right: 15px;">
+												<sec:authentication property="principal.username"/> 님
+											</span>
+                                       	</li>
+                                    </sec:authorize>
                                     </ul>
 
                                 </div>

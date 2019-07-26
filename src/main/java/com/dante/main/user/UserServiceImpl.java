@@ -16,24 +16,24 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService {
-  @Autowired
-  private UserRepository userRepository;
+	@Autowired
+	private UserRepository userRepository;
   
-  @Autowired
-  private BCryptPasswordEncoder bCryptPasswordEncoder;
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
     
-  @Override  
-  public void saveUser(User user,String[] roles) {
-    user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-    Set<UserRole> rolesSet = new HashSet<UserRole>();
-    for(String role:roles){
-      rolesSet.add(new UserRole(role));
-    }
-    user.setRoles(rolesSet);
-    userRepository.save(user);
-  }
-  @Override
-  public User findByUsername(String username) {
-    return userRepository.findByUsername(username);
-  }
+	@Override  
+	public void saveUser(User user,String[] roles) {
+		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		Set<UserRole> rolesSet = new HashSet<UserRole>();
+		for(String role:roles){
+			rolesSet.add(new UserRole(role));
+		}
+		user.setRoles(rolesSet);
+		userRepository.save(user);
+	}
+	@Override
+	public User findByUsername(String username) {
+		return userRepository.findByUsername(username);
+	}
 }

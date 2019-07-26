@@ -14,52 +14,59 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-  @Autowired
-  private UserDetailsService userDetailsService;
+	@Autowired
+	private UserDetailsService userDetailsService;
+	  
+	@Bean
+	public BCryptPasswordEncoder bCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
   
-  @Bean
-  public BCryptPasswordEncoder bCryptPasswordEncoder() {
-      return new BCryptPasswordEncoder();
-  }
-  
-  @Override
-  protected void configure(HttpSecurity http) throws Exception{
+	@Override
+	protected void configure(HttpSecurity http) throws Exception{
     // h2 console 사용을 위한 설정 
-    http.csrf().ignoringAntMatchers("/h2-console/**");
-    http.headers().frameOptions().sameOrigin();
-    
-    http
-      .authorizeRequests()
-        // 해당 url을 허용한다. 
-          .antMatchers("/resources/**","/webapp/**","/loginError","/registration","/h2-console/**").permitAll()
-        // admin 폴더에 경우 admin 권한이 있는 사용자에게만 허용 
-          .antMatchers("/admin/**").hasAuthority("ADMIN")
-          // user 폴더에 경우 user 권한이 있는 사용자에게만 허용
-        .antMatchers("/user/**").hasAuthority("USER")
-        //.anyRequest().authenticated()
-        .and()
-      .formLogin()
-        .loginPage("/login")
-        .successHandler(new CustomAuthenticationSuccess()) // 로그인 성공 핸들러 
-        .failureHandler(new CustomAuthenticationFailure()) // 로그인 실패 핸들러 
-        .permitAll()
-        .and()
-      .logout()
-        .permitAll()
-        .and()
-       .exceptionHandling().accessDeniedPage("/403"); // 권한이 없을경우 해당 url로 이동
-  }
+		//http.csrf().ignoringAntMatchers("/h2-console/**");
+		http.headers().frameOptions().sameOrigin();
+		http
+			.csrf().disable().anonymous()
+				.and()
+			.authorizeRequests()
+			// 해당 url을 허용한다. 
+				.antMatchers("/**"/*, "/resources/**","/webapp/**","/loginError","/registration","/h2-console/**"*/).permitAll()
+				// admin 폴더에 경우 admin 권한이 있는 사용자에게만 허용 
+				.antMatchers("/admin/**").hasAuthority("ADMIN")
+				// user 폴더에 경우 user 권한이 있는 사용자에게만 허용
+				.antMatchers("/user/**").hasAuthority("USER")
+				// .anyRequest().authenticated()
+				.anyRequest().permitAll()
+				.and()
+			.formLogin()
+				.loginPage("/login")
+				//.usernameParameter("user_id")
+	            //.passwordParameter("user_pw")  
+			    .loginProcessingUrl("/loginProcess")
+				.successHandler(new CustomAuthenticationSuccess()) // 로그인 성공 핸들러 
+				.failureHandler(new CustomAuthenticationFailure()) // 로그인 실패 핸들러 
+				.permitAll()
+				.and()
+			.logout()
+				.deleteCookies("SESSION")
+	            .logoutUrl("/logout")
+	            .logoutSuccessUrl("/")
+				.permitAll()
+				.and()
+			.exceptionHandling().accessDeniedPage("/403"); // 권한이 없을경우 해당 url로 이동
+	}
   
-  //스프링부트 2.0이상에서는 AuthenticationManager 사용하려면 필요
-  @Bean
-  @Override
-  public AuthenticationManager authenticationManagerBean() throws Exception {
-	  System.out.println("authenticationManagerBean ~~!!");
-      return super.authenticationManagerBean();
-  }
+	//스프링부트 2.0이상에서는 AuthenticationManager 사용하려면 필요
+	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
   
-  @Autowired
-  public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-      auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
-  }  
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
+	}  
 }

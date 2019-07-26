@@ -11,15 +11,15 @@ import lombok.Data;
 @Table(name="role")
 @Data
 public class UserRole {
-  @Id
-  @GeneratedValue
-  private Long id;
-  private String name;
- 
-  public UserRole(){
-  }
-  
-  public UserRole(String name){
-    this.name = name;
-  }
+	@Id
+	@GeneratedValue
+	private Long id;
+	private String name;
+	 
+	public UserRole(){
+	}
+	  
+	public UserRole(String name){
+		this.name = name;
+	}
 }

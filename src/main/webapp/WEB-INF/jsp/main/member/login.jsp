@@ -29,7 +29,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 centered">
                                 <div class="classic-form">
-                                    <form class="form-horizontal" role="form" action="/loginProcess" method="POST" novalidate>
+                                    <form class="form-horizontal" role="form" action="/loginProcess" method="POST">
                                         <div class="form-group">
                                             <label for="username" class="col-sm-3 control-label">Email</label>
                                             <div class="col-sm-9">
@@ -54,6 +54,11 @@
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-9">
                                                 <button type="submit" class="btn btn-block btn-primary">Sign In</button>
+                                            </div>
+                                            <div>
+                                            	${logout}
+                                            	${username}
+                                            	${error}
                                             </div>
                                         </div>
                                     </form>                    
