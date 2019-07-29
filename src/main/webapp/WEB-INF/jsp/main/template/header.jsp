@@ -304,6 +304,7 @@
                 <!-- //Header// -->
 			</div>
 		</div>
+		<script src="/js/main/common.js"></script>
 	</body>
 </html>
                 

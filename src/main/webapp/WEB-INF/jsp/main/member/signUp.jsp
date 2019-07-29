@@ -8,6 +8,7 @@
 -->
 </style>
 <html class="no-js">
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
 </script>	
     <body>
@@ -92,23 +93,24 @@
                                         <div class="form-group" style="margin-bottom: 0;">
                                             <label for="user_addr" class="col-sm-3 control-label">주소</label>
                                             <div class="col-sm-4">
-                                            	<input type="button" value="우편번호 찾기">
+                                            	<input type="button" value="우편번호 찾기" id="btn_find_zip">
                                             </div>
                                             <div class="col-sm-1"></div>
                                             <div class="col-sm-5">
-                                                <input type="text" class="form-control" placeholder="우편번호" disabled="disabled">
+                                                <input type="text" class="form-control" id="user_zip" name="user_zip" placeholder="우편번호" disabled="disabled">
                                             </div>
                                        	</div>
 										<div class="form-group" style="margin-bottom: 5px;">	
                                             <div class="col-sm-3"></div>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="우편번호 찾기 사용" disabled="disabled">
+                                                <input type="text" class="form-control" id="sub_addr1" placeholder="우편번호 찾기 사용" disabled="disabled">
                                             </div>
                                         </div>    
                                         <div class="form-group">    
                                             <div class="col-sm-3"></div>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="user_addr" name="user_addr" placeholder="나머지주소">
+                                                <input type="text" class="form-control" id="sub_addr2" placeholder="나머지주소">
+                                                <input type="hidden" class="form-control" id="user_addr" name="user_addr">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -129,7 +131,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-9">
                                                 <!-- <button type="button" class="btn btn-block btn-primary" id="reg_member">회원가입</button> -->
-                                                <input type="submit" class="btn btn-block btn-primary" id="reg_member" value="회원가입">
+                                                <input type="button" class="btn btn-block btn-primary" id="reg_member" value="회원가입">
                                             </div>
                                         </div>
                                     </form>                    

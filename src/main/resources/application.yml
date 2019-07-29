@@ -12,12 +12,18 @@ spring:
     database: mysql
     show-sql: true
     hibernate:
-      ddl-auto: update
+      #ddl-auto: update
+      ddl-auto: create-drop # 어플리케이션 실행시 마다 테이블을 drop 후 create 함 
     properties:
       hibernate:
         format_sql: true
-  datasource: 
+  datasource:
+    platform: h2 
     data: classpath:data-h2.sql
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy  #log4j 드라이버
+    url: jdbc:log4jdbc:h2:mem:testdb # H2 DB에 log4j 드라이버 인젝션  //JDBCURL : jdbc:h2:mem:testdb
+    username: sa  #H2 DB에 log4j 드라이버를 인젝션하면 db 접속계정이 날아감!!   //sa로 재설정하여 사용
+    password: 
   profiles: 
     active: local #기본환경선택
     
