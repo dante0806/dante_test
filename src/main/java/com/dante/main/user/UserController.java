@@ -15,9 +15,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dante.main.domain.user.User;
+import com.dante.main.domain.user.UserRepository;
+import com.dante.main.domain.user.UserRepositorySupport;
 import com.dante.main.security.SecurityService;
 import com.dante.main.user.UserService;
 
@@ -34,6 +37,9 @@ public class UserController {
   
 	@Autowired
 	private SecurityService securityService;
+	
+	@Autowired
+	private UserRepositorySupport userRepositorySupport;
   
 	// 로그인
 	@GetMapping("/login")
@@ -66,12 +72,15 @@ public class UserController {
 		mv.setViewName("main/member/signUp");
 		return mv;
 	}
-	  
+	
+	@ResponseBody
 	@PostMapping("/getUser")
-	public ResponseEntity<?> getUserEntity(@RequestBody Map<String,Object> params) throws Exception{
-		User userEntity = userService.findByUsername(String.valueOf(params.get("username")));
-		//return ResponseEntity.ok(userEntity);
-		return null;
+	public List<User> getUserEntity(@RequestBody Map<String,Object> params) throws Exception{
+		String username = String.valueOf(params.get("username"));
+		List<User> result = userRepositorySupport.findByUser_id(username);
+		log.info("result >> " + result);
+		return result;
+		//return null;
 	} 
   
 	// 회원가입 처리 후 로그인

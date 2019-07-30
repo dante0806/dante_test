@@ -4,7 +4,7 @@
 <jsp:include page="main/template/header.jsp"></jsp:include>
 <html class="no-js">
     <body>
-        <div id="wrapper"  >
+        <div id="wrapper" style="margin-top: 50px;background-color: white;" >
             <div class="top_wrapper">
                 <div class="rev-slider-full">
                     <div class="rev-slider-banner-full  rev-slider-full">

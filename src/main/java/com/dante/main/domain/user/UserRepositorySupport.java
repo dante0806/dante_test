@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport
 import org.springframework.stereotype.Repository;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import static generated.com.dante.main.domain.user.QUser.user;
+
 
 @Repository
 public class UserRepositorySupport extends QuerydslRepositorySupport{
@@ -17,10 +19,10 @@ public class UserRepositorySupport extends QuerydslRepositorySupport{
 		this.queryFactory = queryFactory;
 	}
 	
-	public List<User> findByName(String username){
+	public List<User> findByUser_id(String username){
 		return queryFactory
 					.selectFrom(user)
-					.where(user.user_id.eq(username))
-					.fetch();
+					.where(user.username.eq(username))
+					.fetch();	
 	}
 }

@@ -32,7 +32,7 @@ server:
   servlet:
     jsp:
       init-parameters:  
-        development:  true 
+        development:  true
 logging:
   level:
     root: info 

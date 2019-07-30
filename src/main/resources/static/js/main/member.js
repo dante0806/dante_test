@@ -25,21 +25,18 @@ var signup = {
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
-        }).done(function(res) {
-			alert(res);
-            if(false){	//중복건 존재시
-				alert("중복된 아이디가 있습니다.");
-				return false;
-			}else{	//회원가입
+        }).done(function(result) {
+			alert(result);
+            if(result==''){	//회원가입
 				dataFormat();
 				$("#userForm").submit();
+			}else{	//중복건 존재시
+				alert("중복된 아이디가 있습니다.");
+				return false;
 			}
         }).fail(function (error) {
-			alert(error);
         	alert("에러발생! 관리자에게 문의하세요.");
-		});
-
-		
+		});		
     }
 
 };

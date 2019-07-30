@@ -49,8 +49,8 @@ dependencies {
 }
 
 // querydsl 적용
-apply plugin: "com.ewerk.gradle.plugins.querydsl"
-def querydslSrcDir = 'src/main/generated'
+apply plugin: "com.ewerk.gradle.plugins.querydsl"	// Plugin 적용
+def querydslSrcDir = 'src/main/java/generated'		// QClass 생성 위치
 
 querydsl {
     library = "com.querydsl:querydsl-apt"

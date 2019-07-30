@@ -111,7 +111,7 @@
 
 
                             <!-- Navigation File -->
-                            <div class="col-md-10">
+                            <div class="col-md-10"  style="z-index: 30">
 
                                 <!-- Mobile Button Menu -->
                                 <div class="mobile-menu-button">
@@ -122,33 +122,21 @@
 
 
 
-                                <nav>
+                                <nav  style="z-index: 30">
                                     <ul class="navigation">
-                                        <li>
-                                            <a href="../resources/home-version1.html">
+                                    	<li>
+                                            <a href="/boardList">
                                                 <span class="label-nav">
-                                                    Home
+                                                    Develop
                                                 </span>
-                                                <span class="label-nav-sub" data-hover="Examples">
-                                                    Examples
+                                                <span class="label-nav-sub" data-hover="Test">
+                                                    Test
                                                 </span>
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="../resources/home-version1.html">Home version 1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../resources/home-version2.html">Home version 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../resources/home-version3.html">Home version 3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../resources/home-version4.html">Home Version 4</a>
-                                                </li>                                    
-                                                <li>
-                                                    <a href="../resources/home-version5.html">Home Version 5</a>
-                                                </li>                                    
+                                                    <a href="/boardList">Board</a>
+                                                </li>                            
                                             </ul>
                                         </li>
                                         <li>
@@ -188,7 +176,21 @@
                                                 <li>
                                                     <a href="../resources/404.html"> 404 </a>
                                                 </li>
-
+												<li>
+                                                    <a href="../resources/home-version1.html">Home version 1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../resources/home-version2.html">Home version 2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../resources/home-version3.html">Home version 3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../resources/home-version4.html">Home Version 4</a>
+                                                </li>                                    
+                                                <li>
+                                                    <a href="../resources/home-version5.html">Home Version 5</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>
