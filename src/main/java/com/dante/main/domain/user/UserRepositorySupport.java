@@ -9,6 +9,7 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import static generated.com.dante.main.domain.user.QUser.user;
 
 
+
 @Repository
 public class UserRepositorySupport extends QuerydslRepositorySupport{
 
@@ -23,6 +24,7 @@ public class UserRepositorySupport extends QuerydslRepositorySupport{
 		return queryFactory
 					.selectFrom(user)
 					.where(user.username.eq(username))
-					.fetch();	
+					.fetch();
+		//return null;
 	}
 }

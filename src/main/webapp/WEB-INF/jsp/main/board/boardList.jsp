@@ -5,33 +5,54 @@
 <html class="no-js">
 <!-- jqGrid -->
 <link rel="stylesheet" type="text/css" href="../resources/jqgrid/css/ui.jqgrid.css"/>
+<script type="text/javascript" src="../resources/jqgrid/js/i18n/grid.locale-kr.js"></script>
 <script type="text/javascript" src="../resources/jqgrid/js/jquery.jqGrid.min.js"></script>
 
-<script type="text/javascript">
-function makeTable(id, array){
-    $("#"+id).jqGrid({
-           datatype: "local",
-           height: 250, 
-           width : 630,
-           colNames:['일시','속도', 'RPM', '브레이크','상태'],
-           colModel:[
-               {name:'fOcurDtmc', align:'right'},
-               {name:'spd', align:'right'},
-               {name:'rpm', align:'right'},
-               {name:'brkYn', align:'right'},
-               {name:'status', align:'right'}    
-           ],
-           caption: "DTG 데이터"
-     });
 
-     for(var I in array){
-          $("#"+id).jqGrid('addRowData',i+1,array[i]);
-     }
-}
-makeTable('table1', dataArray);
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var cnames = ['아이디','이름','전화번호','주소','기타','성별코드'];
+	
+	$("#jqGrid").jqGrid({
+		
+		url: "jqgridStartMain.do",
+		datatype: "local",
+		colNames : cnames,
+		colModel:[
+			{name:'seq',index:'seq',width:55,key:true,align:"center"},
+			{name:'name',index:'name',width:100,align:"center"},
+			{name:'phone',index:'phone',width:100},
+			{name:'address',index:'address',width:100},
+			{name:'etcc',index:'etcc',width:100},
+			{name:'gender',index:'gender',width:100}
+      	],
+      	height: 480,
+      	rowNum:10,
+      	rowList: [10,20,30],
+      	pager: "#jqGridPager",
+      	rownumbers : true,
+      	ondblClickRow : function(rowId, iRow, iCol, e){
+      		if(iCol ==1){
+      			alert(rowId+" 째줄 입니다.");
+      		}
+      	},
+      	viewrecords : true,
+      	caption:"실습용 테이블"
+	});
+	
+});	
 
 </script>
-    <body>
+    <body><!-- jqgrid_test -->
+                                    	<div class="row">
+                                    		<div>
+                                    			<table id="jqGrid"></table>
+                                    			<div id="jqGridPager"></div>
+                                    			123123
+                                    		</div>
+                                    	</div>
         <div id="wrapper"  >
             <div class="loading-container">
                 <div class="spinner">
@@ -54,11 +75,21 @@ makeTable('table1', dataArray);
                                 <div class="space-sep20"></div>
                             </div>            
                         </div>
+                        
+                        
                         <div class="row">
                             <div class="col-md-12 col-sm-12 centered">
                                 <div class="classic-form">
                                     <form class="form-horizontal" role="form" action="/loginProcess" method="POST">
-                                    	<table id="table1"></table>
+                                    	
+                                    	<!-- jqgrid_test -->
+                                    	<!-- <div class="row">
+                                    		<div>
+                                    			<table id="jqGrid"></table>
+                                    			<div id="jqGridPager"></div>
+                                    		</div>
+                                    	</div> -->
+                                    	
                                         <%-- <div class="form-group">
                                             <label for="username" class="col-sm-3 control-label">Email</label>
                                             <div class="col-sm-9">
