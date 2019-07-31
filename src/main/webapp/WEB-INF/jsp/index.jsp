@@ -10,27 +10,27 @@
                     <div class="rev-slider-banner-full  rev-slider-full">
                         <ul>
                             <li data-transition="fade" data-slotamount="7" data-masterspeed="300" >
-                                <img src="../resources/images/placeholders/slider1/bg1.jpg"  alt="rev-full1" data-fullwidthcentering="on">
+                                <img src="../resources/template/images/placeholders/slider1/bg1.jpg"  alt="rev-full1" data-fullwidthcentering="on">
                                 <div class="tp-caption lft stb stl"
                                      data-x="650"
                                      data-y="93"
                                      data-speed="500"
                                      data-start="500"
-                                     data-easing="easeOutExpo"   data-end="6000" data-endspeed="500"><img src="../resources/images/placeholders/slider1/imac.png" alt="Image 1"></div>
+                                     data-easing="easeOutExpo"   data-end="6000" data-endspeed="500"><img src="../resources/template/images/placeholders/slider1/imac.png" alt="Image 1"></div>
 
                                 <div class="tp-caption lfb stb stl"
                                      data-x="616"
                                      data-y="194"
                                      data-speed="500"
                                      data-start="700"
-                                     data-easing="easeOutExpo"   data-end="6000" data-endspeed="500"><img src="../resources/images/placeholders/slider1/ipad.png" alt="Image 1"></div>
+                                     data-easing="easeOutExpo"   data-end="6000" data-endspeed="500"><img src="../resources/template/images/placeholders/slider1/ipad.png" alt="Image 1"></div>
 
                                 <div class="tp-caption lfr stb stl"
                                      data-x="751"
                                      data-y="290"
                                      data-speed="1000"
                                      data-start="1000"
-                                     data-easing="easeOutExpo"   data-end="6000" data-endspeed="500"><img src="../resources/images/placeholders/slider1/iphone.png" alt="Image 1"></div>
+                                     data-easing="easeOutExpo"   data-end="6000" data-endspeed="500"><img src="../resources/template/images/placeholders/slider1/iphone.png" alt="Image 1"></div>
 
                                 <div class="tp-caption slider-text-title sft str"
                                      data-x="20"
@@ -53,11 +53,11 @@
 
 
                             <li  data-transition="slideleft" data-slotamount="14">
-                                <img src="../resources/images/placeholders/slider1/bg2.jpg" alt="Rev Full">
+                                <img src="../resources/template/images/placeholders/slider1/bg2.jpg" alt="Rev Full">
 
                                 <div class="caption sfb" data-x="693" data-y="75" data-speed="700" data-start="0"
                                      data-easing="easeOutBack">
-                                    <img src="../resources/images/placeholders/slider1/mobile.png" alt=""/>
+                                    <img src="../resources/template/images/placeholders/slider1/mobile.png" alt=""/>
                                 </div>
 
                                 <div class="tp-caption slider-text-title sft str"
@@ -235,12 +235,12 @@
                                          data-delay="0.6s">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
-                                                src="../resources/images/placeholders/portfolio1.jpg"
+                                                src="../resources/template/images/placeholders/portfolio1.jpg"
                                                 alt=""/>
 
                                             <div class="item-img-overlay">
                                                 <a class="portfolio-zoom fa fa-plus"
-                                                   href="../resources/images/placeholders/portfolio1.jpg"
+                                                   href="../resources/template/images/placeholders/portfolio1.jpg"
                                                    data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                 <div class="item_img_overlay_content">
@@ -263,12 +263,12 @@
                                          data-delay="0.8s">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
-                                                src="../resources/images/placeholders/portfolio2.jpg"
+                                                src="../resources/template/images/placeholders/portfolio2.jpg"
                                                 alt=""/>
 
                                             <div class="item-img-overlay">
                                                 <a class="portfolio-zoom fa fa-plus"
-                                                   href="../resources/images/placeholders/portfolio2.jpg"
+                                                   href="../resources/template/images/placeholders/portfolio2.jpg"
                                                    data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                 <div class="item_img_overlay_content">
@@ -291,7 +291,7 @@
                                          data-delay="1s">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
-                                                src="../resources/images/placeholders/portfolio3.jpg"
+                                                src="../resources/template/images/placeholders/portfolio3.jpg"
                                                 alt=""/>
 
                                             <div class="item-img-overlay">
@@ -319,12 +319,12 @@
                                          data-delay="1.2s">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
-                                                src="../resources/images/placeholders/portfolio4.jpg"
+                                                src="../resources/template/images/placeholders/portfolio4.jpg"
                                                 alt=""/>
 
                                             <div class="item-img-overlay">
                                                 <a class="portfolio-zoom fa fa-plus"
-                                                   href="../resources/images/placeholders/portfolio4.jpg"
+                                                   href="../resources/template/images/placeholders/portfolio4.jpg"
                                                    data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                 <div class="item_img_overlay_content">
@@ -347,7 +347,7 @@
                                          data-delay="1.4s">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
-                                                src="../resources/images/placeholders/portfolio5.jpg"
+                                                src="../resources/template/images/placeholders/portfolio5.jpg"
                                                 alt=""/>
 
                                             <div class="item-img-overlay">
@@ -375,7 +375,7 @@
                                          data-delay="1.6s">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
-                                                src="../resources/images/placeholders/portfolio6.jpg"
+                                                src="../resources/template/images/placeholders/portfolio6.jpg"
                                                 alt=""/>
 
                                             <div class="item-img-overlay">
@@ -403,12 +403,12 @@
                                          data-delay="1.8s">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
-                                                src="../resources/images/placeholders/portfolio7.jpg"
+                                                src="../resources/template/images/placeholders/portfolio7.jpg"
                                                 alt=""/>
 
                                             <div class="item-img-overlay">
                                                 <a class="portfolio-zoom fa fa-plus"
-                                                   href="../resources/images/placeholders/portfolio7.jpg"
+                                                   href="../resources/template/images/placeholders/portfolio7.jpg"
                                                    data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                 <div class="item_img_overlay_content">
@@ -431,12 +431,12 @@
                                          data-delay="2s">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
-                                                src="../resources/images/placeholders/portfolio8.jpg"
+                                                src="../resources/template/images/placeholders/portfolio8.jpg"
                                                 alt=""/>
 
                                             <div class="item-img-overlay">
                                                 <a class="portfolio-zoom fa fa-plus"
-                                                   href="../resources/images/placeholders/portfolio8.jpg"
+                                                   href="../resources/template/images/placeholders/portfolio8.jpg"
                                                    data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                 <div class="item_img_overlay_content">
@@ -485,10 +485,10 @@
                                             <div class="col-md-3 col-sm-3">
                                                 <div class="feature animated" data-animtype="fadeInUp" data-animrepeat="0" data-animspeed="1s" data-animdelay="0.4s">
                                                     <div class="feature-image img-overlay">
-                                                        <img src="../resources/images/placeholders/blog1.jpg" alt="Blog">
+                                                        <img src="../resources/template/images/placeholders/blog1.jpg" alt="Blog">
 
                                                         <div class="item-img-overlay">
-                                                            <a class="portfolio-zoom fa fa-plus" href="../resources/images/placeholders/blog1.jpg"
+                                                            <a class="portfolio-zoom fa fa-plus" href="../resources/template/images/placeholders/blog1.jpg"
                                                                data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                         </div>
@@ -525,10 +525,10 @@
                                             <div class="col-md-3 col-sm-3">
                                                 <div class="feature animated" data-animtype="fadeInUp" data-animrepeat="0" data-animspeed="1s" data-animdelay="0.6s">
                                                     <div class="feature-image img-overlay">
-                                                        <img src="../resources/images/placeholders/blog2.jpg" alt="Blog">
+                                                        <img src="../resources/template/images/placeholders/blog2.jpg" alt="Blog">
 
                                                         <div class="item-img-overlay">
-                                                            <a class="portfolio-zoom fa fa-plus" href="../resources/images/placeholders/blog2.jpg"
+                                                            <a class="portfolio-zoom fa fa-plus" href="../resources/template/images/placeholders/blog2.jpg"
                                                                data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                         </div>
@@ -565,10 +565,10 @@
                                             <div class="col-md-3 col-sm-3">
                                                 <div class="feature animated" data-animtype="fadeInUp" data-animrepeat="0" data-animspeed="1s" data-animdelay="0.8s">
                                                     <div class="feature-image img-overlay">
-                                                        <img src="../resources/images/placeholders/blog3.jpg" alt="Blog">
+                                                        <img src="../resources/template/images/placeholders/blog3.jpg" alt="Blog">
 
                                                         <div class="item-img-overlay">
-                                                            <a class="portfolio-zoom fa fa-plus" href="../resources/images/placeholders/blog3.jpg"
+                                                            <a class="portfolio-zoom fa fa-plus" href="../resources/template/images/placeholders/blog3.jpg"
                                                                data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                         </div>
@@ -605,10 +605,10 @@
                                             <div class="col-md-3 col-sm-3">
                                                 <div class="feature animated" data-animtype="fadeInUp" data-animrepeat="0" data-animspeed="1s" data-animdelay="1s">
                                                     <div class="feature-image img-overlay">
-                                                        <img src="../resources/images/placeholders/blog4.jpg" alt="Blog">
+                                                        <img src="../resources/template/images/placeholders/blog4.jpg" alt="Blog">
 
                                                         <div class="item-img-overlay">
-                                                            <a class="portfolio-zoom fa fa-plus" href="../resources/images/placeholders/blog4.jpg"
+                                                            <a class="portfolio-zoom fa fa-plus" href="../resources/template/images/placeholders/blog4.jpg"
                                                                data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
 
                                                         </div>
@@ -650,11 +650,11 @@
                                                 <h3 class="h3-section-info animated" data-animtype="flipInX" data-animrepeat="0" data-animspeed="1s" data-animdelay="0.2s">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
                                                     rhoncus ut, imperdiet</h3>
                                                 <ul class="section-clients">
-                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.2s"><img src="../resources/images/placeholders/clients/white_logo1.png" alt="Logo" class="img-responsive client-image" /></li>
-                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.3s"><img src="../resources/images/placeholders/clients/white_logo2.png" alt="Logo" class="img-responsive client-image" /></li>
-                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.4s"><img src="../resources/images/placeholders/clients/white_logo3.png" alt="Logo" class="img-responsive client-image" /></li>
-                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.5s"><img src="../resources/images/placeholders/clients/white_logo4.png" alt="Logo" class="img-responsive client-image" /></li>
-                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.6s"><img src="../resources/images/placeholders/clients/white_logo5.png" alt="Logo" class="img-responsive client-image" /></li>
+                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.2s"><img src="../resources/template/images/placeholders/clients/white_logo1.png" alt="Logo" class="img-responsive client-image" /></li>
+                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.3s"><img src="../resources/template/images/placeholders/clients/white_logo2.png" alt="Logo" class="img-responsive client-image" /></li>
+                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.4s"><img src="../resources/template/images/placeholders/clients/white_logo3.png" alt="Logo" class="img-responsive client-image" /></li>
+                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.5s"><img src="../resources/template/images/placeholders/clients/white_logo4.png" alt="Logo" class="img-responsive client-image" /></li>
+                                                    <li class="animated" data-animtype="bounceIn" data-animrepeat="0" data-animdelay="0.6s"><img src="../resources/template/images/placeholders/clients/white_logo5.png" alt="Logo" class="img-responsive client-image" /></li>
                                                 </ul>
                                             </div>
                                         </div>            </div>
@@ -730,7 +730,7 @@
                                      data-animrepeat="0"
                                      data-animspeed="1s"
                                      data-animdelay="0.7s">
-                                    <img src="../resources/images/placeholders/responsive-mockup2-placeholder.png" alt="MockUp" class="img-responsive" />
+                                    <img src="../resources/template/images/placeholders/responsive-mockup2-placeholder.png" alt="MockUp" class="img-responsive" />
                                 </div>
                             </div>
                         </div>
@@ -963,7 +963,7 @@
                                      data-animrepeat="1"
                                      data-speed="1s"
                                      data-delay="0s">
-                                    <img src="../resources/images/placeholders/testimonial-big.png" alt=""/>
+                                    <img src="../resources/template/images/placeholders/testimonial-big.png" alt=""/>
                                 </div>
                             </div>
                         </div>

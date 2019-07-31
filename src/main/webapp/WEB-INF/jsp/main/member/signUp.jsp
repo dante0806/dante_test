@@ -142,7 +142,7 @@
                 </div>
             </div><!--.content-wrapper end -->
 		</div>
-	    <script src="/js/main/member.js"></script>
+	    <script src="../resources/js/main/member.js"></script>
     </body>
 </html>
 <jsp:include page="../template/footer.jsp"></jsp:include>

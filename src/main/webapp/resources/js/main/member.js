@@ -2,7 +2,6 @@ var signup = {
     init : function () {
         var _this = this;
 		$('#btn_find_zip').on('click', function(){//우편번호찾기
-			alert("11111");
 			find_addr();	
 		});
 
@@ -26,8 +25,7 @@ var signup = {
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
         }).done(function(result) {
-			alert(result);
-            if(result==''){	//회원가입
+            if(result==true){	//회원가입
 				dataFormat();
 				$("#userForm").submit();
 			}else{	//중복건 존재시

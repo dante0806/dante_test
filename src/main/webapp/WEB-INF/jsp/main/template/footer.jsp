@@ -13,7 +13,7 @@
                                 <div class="col-md-3 col-sm-3 footer-col">
                                     <div class="footer-content">
                                         <div class="footer-content-logo">
-                                            <img src="../resources/images/main_logo.png" alt=""/>
+                                            <img src="../resources/template/images/main_logo.png" alt=""/>
                                         </div>
                                         <div class="footer-content-text">
                                             <p>Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget
@@ -114,39 +114,39 @@
 
         </div><!-- wrapper end -->
 
-        <script type="text/javascript" src="../resources/js/_jq.js"></script>
+        <script type="text/javascript" src="../resources/template/js/_jq.js"></script>
 
-        <script type="text/javascript" src="../resources/js/_jquery.placeholder.js"></script>
-
-
+        <script type="text/javascript" src="../resources/template/js/_jquery.placeholder.js"></script>
 
 
 
 
-        <script src="../resources/js/activeaxon_menu.js" type="text/javascript"></script> 
-        <script src="../resources/js/animationEnigne.js" type="text/javascript"></script> 
-        <script src="../resources/js/bootstrap.min.js" type="text/javascript"></script> 
-        <script src="../resources/js/ie-fixes.js" type="text/javascript"></script> 
-        <script src="../resources/js/jq.appear.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.base64.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.cycle.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.cycle2.carousel.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.easing.1.3.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.easytabs.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.infinitescroll.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.isotope.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.prettyPhoto.js" type="text/javascript"></script> 
-        <script src="../resources/js/jQuery.scrollPoint.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.themepunch.plugins.min.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.themepunch.revolution.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.tipsy.js" type="text/javascript"></script> 
-        <script src="../resources/js/jquery.validate.js" type="text/javascript"></script> 
-        <script src="../resources/js/jQuery.XDomainRequest.js" type="text/javascript"></script> 
-        <script src="../resources/js/kanzi.js" type="text/javascript"></script> 
-        <script src="../resources/js/retina.js" type="text/javascript"></script> 
-        <script src="../resources/js/timeago.js" type="text/javascript"></script> 
-        <script src="../resources/js/tweetable.jquery.js" type="text/javascript"></script> 
+
+
+        <script src="../resources/template/js/activeaxon_menu.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/animationEnigne.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/bootstrap.min.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/ie-fixes.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jq.appear.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.base64.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.cycle.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.cycle2.carousel.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.easing.1.3.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.easytabs.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.infinitescroll.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.isotope.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.prettyPhoto.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jQuery.scrollPoint.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.themepunch.plugins.min.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.themepunch.revolution.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.tipsy.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jquery.validate.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/jQuery.XDomainRequest.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/kanzi.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/retina.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/timeago.js" type="text/javascript"></script> 
+        <script src="../resources/template/js/tweetable.jquery.js" type="text/javascript"></script> 
     </body>
 </html>
                 

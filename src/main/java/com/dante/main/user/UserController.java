@@ -20,7 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dante.main.domain.user.User;
 import com.dante.main.domain.user.UserRepository;
-import com.dante.main.domain.user.UserRepositorySupport;
+//import com.dante.main.domain.user.UserRepositorySupport;
 import com.dante.main.security.SecurityService;
 import com.dante.main.user.UserService;
 
@@ -39,7 +39,7 @@ public class UserController {
 	private SecurityService securityService;
 	
 	@Autowired
-	private UserRepositorySupport userRepositorySupport;
+	private UserRepository userRepository;
   
 	// 로그인
 	@GetMapping("/login")
@@ -75,12 +75,16 @@ public class UserController {
 	
 	@ResponseBody
 	@PostMapping("/getUser")
-	public List<User> getUserEntity(@RequestBody Map<String,Object> params) throws Exception{
+	public boolean getUserEntity(@RequestBody Map<String,Object> params) throws Exception{
+		boolean check_user = true;
 		String username = String.valueOf(params.get("username"));
-		List<User> result = userRepositorySupport.findByUser_id(username);
-		log.info("result >> " + result);
-		return result;
-		//return null;
+		User  user = new User();
+		user =  userRepository.findByUsername(username);
+		if(user!=null){
+			check_user = false;
+		}
+		System.out.println("check_user  >>> "+check_user);
+		return check_user;
 	} 
   
 	// 회원가입 처리 후 로그인

@@ -8,23 +8,23 @@
         <title>Dante Home</title>
         <meta name="description" content="Kanzi HTML5 Template">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../resources/css/revolution_settings.css">
-        <link rel="stylesheet" href="../resources/css/bootstrap.css">
-        <link rel="stylesheet" href="../resources/css/font-awesome.css">
-        <link rel="stylesheet" href="../resources/css/axfont.css">
-        <link rel="stylesheet" href="../resources/css/tipsy.css">
-        <link rel="stylesheet" href="../resources/css/prettyPhoto.css">
-        <link rel="stylesheet" href="../resources/css/isotop_animation.css">
-        <link rel="stylesheet" href="../resources/css/animate.css">
-        <link href='../resources/css/style.css' rel='stylesheet' type='text/css'> 
-        <link href='../resources/css/responsive.css' rel='stylesheet' type='text/css'>
-        <link href="../resources/css/skins/light-blue.css" rel='stylesheet' type='text/css' id="skin-file">
+        <link rel="stylesheet" href="../resources/template/css/revolution_settings.css">
+        <link rel="stylesheet" href="../resources/template/css/bootstrap.css">
+        <link rel="stylesheet" href="../resources/template/css/font-awesome.css">
+        <link rel="stylesheet" href="../resources/template/css/axfont.css">
+        <link rel="stylesheet" href="../resources/template/css/tipsy.css">
+        <link rel="stylesheet" href="../resources/template/css/prettyPhoto.css">
+        <link rel="stylesheet" href="../resources/template/css/isotop_animation.css">
+        <link rel="stylesheet" href="../resources/template/css/animate.css">
+        <link href='../resources/template/css/style.css' rel='stylesheet' type='text/css'> 
+        <link href='../resources/template/css/responsive.css' rel='stylesheet' type='text/css'>
+        <link href="../resources/template/css/skins/light-blue.css" rel='stylesheet' type='text/css' id="skin-file">
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
         <script src="../resources/js/jquery-3.4.1.min.js"></script>
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../resources/css/color-chooser.css">
+        <link rel="stylesheet" href="../resources/template/css/color-chooser.css">
     </head>
     <body>
         <div id="wrapper"  >
@@ -103,8 +103,8 @@
 
                             <!-- Logo -->
                             <div class="col-xs-2 logo">
-                                <a href="../resources/home-version1.html">
-                                    <img src="../resources/images/main_logo.png" alt="Kanzi HTML5 Template"/>
+                                <a href="../resources/template/home-version1.html">
+                                    <img src="../resources/template/images/main_logo.png" alt="Kanzi HTML5 Template"/>
                                 </a>
                             </div>
                             <!-- //Logo// -->
@@ -140,7 +140,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="../resources/about-us.html">
+                                            <a href="../resources/template/about-us.html">
                                                 <span class="label-nav">
                                                     Pages
                                                 </span>
@@ -150,51 +150,51 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="../resources/about-us.html"> About </a>
+                                                    <a href="../resources/template/about-us.html"> About </a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/services.html"> Services </a>
+                                                    <a href="../resources/template/services.html"> Services </a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/team.html"> Our Team </a>
+                                                    <a href="../resources/template/team.html"> Our Team </a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/sidebar-navigation.html"> Sidebar Navigation </a>
+                                                    <a href="../resources/template/sidebar-navigation.html"> Sidebar Navigation </a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/faq.html"> FAQ </a>
+                                                    <a href="../resources/template/faq.html"> FAQ </a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/Contact.html">Contact Us </a>
+                                                    <a href="../resources/template/Contact.html">Contact Us </a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/sign-up.html">Sign Up </a>
+                                                    <a href="../resources/template/sign-up.html">Sign Up </a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/sign-in.html">Sign In</a>
+                                                    <a href="../resources/template/sign-in.html">Sign In</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/404.html"> 404 </a>
+                                                    <a href="../resources/template/404.html"> 404 </a>
                                                 </li>
 												<li>
-                                                    <a href="../resources/home-version1.html">Home version 1</a>
+                                                    <a href="../resources/template/home-version1.html">Home version 1</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/home-version2.html">Home version 2</a>
+                                                    <a href="../resources/template/home-version2.html">Home version 2</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/home-version3.html">Home version 3</a>
+                                                    <a href="../resources/template/home-version3.html">Home version 3</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/home-version4.html">Home Version 4</a>
+                                                    <a href="../resources/template/home-version4.html">Home Version 4</a>
                                                 </li>                                    
                                                 <li>
-                                                    <a href="../resources/home-version5.html">Home Version 5</a>
+                                                    <a href="../resources/template/home-version5.html">Home Version 5</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="../resources/blog.html">
+                                            <a href="../resources/template/blog.html">
                                                 <span class="label-nav">
                                                     Blog
                                                 </span>
@@ -204,18 +204,18 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="../resources/blog.html">Blog</a>
+                                                    <a href="../resources/template/blog.html">Blog</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/blog-masonry.html">Blog Masonry</a>
+                                                    <a href="../resources/template/blog-masonry.html">Blog Masonry</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/blog-single.html">Blog Single</a>
+                                                    <a href="../resources/template/blog-single.html">Blog Single</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="../resources/portfolio-two-columns.html">
+                                            <a href="../resources/template/portfolio-two-columns.html">
                                                 <span class="label-nav">
                                                     Portfolio
                                                 </span>
@@ -225,21 +225,21 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="../resources/portfolio-two-columns.html">2 Column</a>
+                                                    <a href="../resources/template/portfolio-two-columns.html">2 Column</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/portfolio-three-columns.html">3 Column</a>
+                                                    <a href="../resources/template/portfolio-three-columns.html">3 Column</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/portfolio-four-columns.html">4 Column</a>
+                                                    <a href="../resources/template/portfolio-four-columns.html">4 Column</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/portfolio-single.html">Single</a>
+                                                    <a href="../resources/template/portfolio-single.html">Single</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="../resources/elements.html">
+                                            <a href="../resources/template/elements.html">
                                                 <span class="label-nav">
                                                     Shortcodes
                                                 </span>
@@ -249,35 +249,35 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="../resources/accordions.html">Accordions & Toggles</a>
+                                                    <a href="../resources/template/accordions.html">Accordions & Toggles</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/columns.html">Columns</a>
+                                                    <a href="../resources/template/columns.html">Columns</a>
                                                 </li>                                    
                                                 <li>
-                                                    <a href="../resources/elements.html">Elements</a>
+                                                    <a href="../resources/template/elements.html">Elements</a>
                                                 </li>                                    
                                                 <li>
-                                                    <a href="../resources/full-block-content.html">Full Block Content</a>
+                                                    <a href="../resources/template/full-block-content.html">Full Block Content</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/icon-boxes.html">Icon Boxes</a>
+                                                    <a href="../resources/template/icon-boxes.html">Icon Boxes</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/icons.html">Icons</a>
+                                                    <a href="../resources/template/icons.html">Icons</a>
                                                 </li>                                    
                                                 <li>
-                                                    <a href="../resources/price-tables.html">Pricing Tables</a>
+                                                    <a href="../resources/template/price-tables.html">Pricing Tables</a>
                                                 </li>                                    
                                                 <li>
-                                                    <a href="../resources/tabs.html">Tabs</a>
+                                                    <a href="../resources/template/tabs.html">Tabs</a>
                                                 </li>
                                                 <li>
-                                                    <a href="../resources/testimonials.html">Testimonials</a>
+                                                    <a href="../resources/template/testimonials.html">Testimonials</a>
                                                 </li>
 
                                                 <li>
-                                                    <a href="../resources/typography.html">Typography</a>
+                                                    <a href="../resources/template/typography.html">Typography</a>
                                                 </li>
 
                                             </ul>
@@ -306,7 +306,7 @@
                 <!-- //Header// -->
 			</div>
 		</div>
-		<script src="/js/main/common.js"></script>
+		<script src="../resources/js/main/common.js"></script>
 	</body>
 </html>
                 
