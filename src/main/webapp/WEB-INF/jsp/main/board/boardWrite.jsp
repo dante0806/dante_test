@@ -4,32 +4,25 @@
 <jsp:include page="../template/header.jsp"></jsp:include>
 <html class="no-js">
 	<style type="text/css">
-		table.type10 {
-		    border-collapse: collapse;
-		    text-align: left;
+		table.type11 {
+		    border-collapse: separate;
+		    border-spacing: 1px;
+		    text-align: center;
 		    line-height: 1.5;
-		    border-top: 1px solid #ccc;
-		    border-bottom: 1px solid #ccc;
 		    margin: 20px 10px;
 		}
-		table.type10 thead th {
-		    width: 150px;
+		table.type11 th {
 		    padding: 10px;
 		    font-weight: bold;
 		    vertical-align: top;
 		    color: #fff;
-		    background: #3399CC;
-		    margin: 20px 10px;
+		    background: #3399CC ;
 		}
-		table.type10 tbody th {
-		    padding: 10px;
-		}
-		table.type10 td {
+		table.type11 td {
 		    padding: 10px;
 		    vertical-align: top;
-		}
-		table.type10 .even {
-		    background: #CCFFCC;
+		    border-bottom: 1px solid #ccc;
+		    background: #eee;
 		}
 	</style>
 	<script type="text/javascript">
@@ -61,34 +54,34 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 centered">
                                 <div class="classic-form">
-                                	<div align="right">
-	                                	<input type="button" value="글쓰기" id="btn_board_write" >
-                                	</div>
+                                <div align="right">
+                                	<input type="button" value="목록" id="btn_board_list">
+                                </div>
                                     <form class="form-horizontal" role="form" action="/loginProcess" method="POST">
-                                    	<table class="type10">
+                                    	<table class="type11">
 										    <thead>
-										    <tr>
-										        <th>번호</th>
-										        <th>작성자</th>
-										        <th>제목</th>
-										        <th>등록일시</th>
-										    </tr>
+										    	<tr>
+										    		<th colspan="2">글쓰기</th>
+										    	</tr>
 										    </thead>
 										    <tbody>
 										    <tr>
-										        <th scope="row">1</th>
-										        <td>김시은</td>
-										        <td>테스트제목1</td>
-										        <td>2019-07-30 12:53</td>
+										        <th>제목</th>
+										        <td>
+										        	<input type="text" name="board_title" id="board_title">
+										        </td>
 										    </tr>
 										    <tr>
-										        <th scope="row" class="even">2</th>
-										        <td class="even">김시은2</td>
-										        <td class="even">테스트제목2</td>
-										        <td class="even">2019-07-30 12:51</td>
+										        <th>내용</th>
+										        <td>
+										        	<textarea rows="20" cols="60" style="resize: none;"></textarea>
+										        </td>
 										    </tr>
 										    </tbody>
 										</table>
+										<div align="center" style="padding-left: 20px;">
+											<input type="button" class="btn btn-block btn-primary" value="등록" id="btn_reg_board" style="background-color: #E7708D;">
+										</div>
                                     </form>                    
                                 </div>
                             </div>

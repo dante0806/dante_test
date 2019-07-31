@@ -13,4 +13,11 @@ public class BoardController {
 		mv.setViewName("main/board/boardList");
 		return mv;
 	}
+	
+	@GetMapping("/boardWrite")
+	public ModelAndView boardWrite(){
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("main/board/boardWrite");
+		return mv;
+	}
 }
