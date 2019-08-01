@@ -75,12 +75,14 @@
 										    </tr>
 										    </thead>
 										    <tbody>
-										    <tr>
-										        <th scope="row">1</th>
-										        <td>김시은</td>
-										        <td>테스트제목1</td>
-										        <td>2019-07-30 12:53</td>
-										    </tr>
+										    <c:forEach items="${list}">
+											    <tr>
+											        <th scope="row">1</th>
+											        <td>${list.user_id}</td>
+											        <td>${list.board_title}</td>
+											        <td>2019-07-30 12:53</td>
+											    </tr>
+										    </c:forEach>
 										    <tr>
 										        <th scope="row" class="even">2</th>
 										        <td class="even">김시은2</td>

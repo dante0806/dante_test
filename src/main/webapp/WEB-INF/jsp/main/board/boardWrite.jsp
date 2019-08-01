@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html>
 <jsp:include page="../template/header.jsp"></jsp:include>
 <html class="no-js">
@@ -57,7 +58,11 @@
                                 <div align="right">
                                 	<input type="button" value="목록" id="btn_board_list">
                                 </div>
-                                    <form class="form-horizontal" role="form" action="/loginProcess" method="POST">
+                                    <form class="form-horizontal" name="boardForm" role="form" action="/regBoard" method="POST">
+                                    
+                                    	<input type="hidden" name="user_id" value="<sec:authorize access="isAuthenticated()">
+                                    	<sec:authentication property='principal.username'/>
+                                    </sec:authorize>">
                                     	<table class="type11">
 										    <thead>
 										    	<tr>
@@ -74,13 +79,13 @@
 										    <tr>
 										        <th>내용</th>
 										        <td>
-										        	<textarea rows="20" cols="60" style="resize: none;"></textarea>
+										        	<textarea name="board_content" rows="20" cols="60" style="resize: none;"></textarea>
 										        </td>
 										    </tr>
 										    </tbody>
 										</table>
 										<div align="center" style="padding-left: 20px;">
-											<input type="button" class="btn btn-block btn-primary" value="등록" id="btn_reg_board" style="background-color: #E7708D;">
+											<input type="submit" class="btn btn-block btn-primary" value="등록" id="btn_reg_board" style="background-color: #E7708D;">
 										</div>
                                     </form>                    
                                 </div>

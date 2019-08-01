@@ -1,5 +1,5 @@
 package com.dante.main.domain.user;
- 
+
 import java.util.Set;
  
 import javax.persistence.CascadeType;
@@ -13,7 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
- 
+
 import lombok.Data;
  
 @Entity
@@ -42,4 +42,7 @@ public class User {
 	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"),
 					   inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<UserRole> roles;
+	
+	/*@OneToMany(mappedBy = "user") //Board 객체와 양방향 관계를 만들기 위해 추가(대상테이블) 
+	private List<Board> board = new ArrayList<Board>();*/
 }
