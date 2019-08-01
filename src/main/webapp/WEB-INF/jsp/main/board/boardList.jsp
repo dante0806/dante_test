@@ -75,20 +75,14 @@
 										    </tr>
 										    </thead>
 										    <tbody>
-										    <c:forEach items="${list}">
+										    <c:forEach items="${list}" var="list" varStatus="status">
 											    <tr>
-											        <th scope="row">1</th>
+											        <th scope="row">${status.count}</th>
 											        <td>${list.user_id}</td>
 											        <td>${list.board_title}</td>
 											        <td>2019-07-30 12:53</td>
 											    </tr>
 										    </c:forEach>
-										    <tr>
-										        <th scope="row" class="even">2</th>
-										        <td class="even">김시은2</td>
-										        <td class="even">테스트제목2</td>
-										        <td class="even">2019-07-30 12:51</td>
-										    </tr>
 										    </tbody>
 										</table>
                                     </form>                    

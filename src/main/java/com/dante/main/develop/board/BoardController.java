@@ -24,7 +24,8 @@ public class BoardController {
 	@GetMapping("/boardList")
 	public ModelAndView boardList(){
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("list", boardRepository.findAll());
+		List<Board> list = boardRepository.findAll();
+		mv.addObject("list", list);
 		mv.setViewName("main/board/boardList");
 		return mv;
 	}
