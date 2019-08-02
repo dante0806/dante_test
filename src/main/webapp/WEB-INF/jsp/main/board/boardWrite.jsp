@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <jsp:include page="../template/header.jsp"></jsp:include>
 <html class="no-js">
@@ -15,7 +16,8 @@
 		table.type11 th {
 		    padding: 10px;
 		    font-weight: bold;
-		    vertical-align: top;
+		    vertical-align: middle;
+		    text-align:center;
 		    color: #fff;
 		    background: #3399CC ;
 		}
@@ -24,6 +26,20 @@
 		    vertical-align: top;
 		    border-bottom: 1px solid #ccc;
 		    background: #eee;
+		}
+		input.text {
+		    font-size: 9pt;
+		    text-align: left;
+		    border: 1 solid #acacac;
+		    background-color: #ffffff;
+		    font-family: DOTUM;
+		    color: #303030;
+		}
+		.input {
+		    height: 24px;
+		    border-radius: 2px;
+		    border: 1px solid #929292;
+		    margin: 3px 0px;
 		}
 	</style>
 	<script type="text/javascript">
@@ -58,11 +74,15 @@
                                 <div align="right">
                                 	<input type="button" value="목록" id="btn_board_list">
                                 </div>
-                                    <form class="form-horizontal" name="boardForm" role="form" action="/regBoard" method="POST">
-                                    
-                                    	<input type="hidden" name="user_id" value="<sec:authorize access="isAuthenticated()">
-                                    	<sec:authentication property='principal.username'/>
-                                    </sec:authorize>">
+                                    <form class="form-horizontal" name="boardForm" id="boardForm" role="form" action="/regBoard" method="POST">
+                                    	<input type="hidden" name="user_id" id="user_id" 
+                                    		value="<sec:authorize access="isAuthenticated()">
+                                    						<sec:authentication property='principal.username'/>
+                                    					</sec:authorize>">                                    	
+                                    	<c:if test="${!empty board}">
+											<div align="right">등록 일시 : <tf:formatDateTime value="${board.reg_dt}" pattern="yyyy-MM-dd HH:mm:ss"/></div>
+											<div align="right">마지막 수정 일시 : <tf:formatDateTime value="${board.upd_dt}" pattern="yyyy-MM-dd HH:mm:ss"/></div>
+										</c:if>                                    					
                                     	<table class="type11">
 										    <thead>
 										    	<tr>
@@ -73,19 +93,27 @@
 										    <tr>
 										        <th>제목</th>
 										        <td>
-										        	<input type="text" name="board_title" id="board_title">
+										        	<input type="text" class="text input" name="board_title" id="board_title"
+										        		value="<c:if test="${!empty board}">${board.board_title}</c:if>">
 										        </td>
 										    </tr>
 										    <tr>
 										        <th>내용</th>
 										        <td>
-										        	<textarea name="board_content" rows="20" cols="60" style="resize: none;"></textarea>
+										        	<textarea name="board_content" id="board_content" rows="20" cols="60" style="resize: none;" ><c:if test="${!empty board}">${board.board_content }</c:if></textarea>
 										        </td>
 										    </tr>
 										    </tbody>
 										</table>
 										<div align="center" style="padding-left: 20px;">
-											<input type="submit" class="btn btn-block btn-primary" value="등록" id="btn_reg_board" style="background-color: #E7708D;">
+										<c:if test="${empty board}">	
+											<input type="button" class="btn btn-block btn-primary" value="등록" id="btn_reg_board" style="background-color: #E7708D;">
+										</c:if>
+										<c:if test="${!empty board}">
+											<input type="hidden" name="board_id" id="board_id" value="${board.id}">
+											<input type="button" class="btn btn-primary" value="수정" id="btn_modify_board">
+											<input type="button" class="btn btn-primary" value="삭제" id="btn_del_board" style="background-color: red;">
+										</c:if>	
 										</div>
                                     </form>                    
                                 </div>

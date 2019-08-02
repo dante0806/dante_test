@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <jsp:include page="../template/header.jsp"></jsp:include>
 <html class="no-js">
 	<style type="text/css">
 		table.type10 {
 		    border-collapse: collapse;
-		    text-align: left;
 		    line-height: 1.5;
 		    border-top: 1px solid #ccc;
 		    border-bottom: 1px solid #ccc;
 		    margin: 20px 10px;
 		}
 		table.type10 thead th {
-		    width: 150px;
+			text-align: center;
 		    padding: 10px;
 		    font-weight: bold;
 		    vertical-align: top;
@@ -64,8 +64,14 @@
                                 	<div align="right">
 	                                	<input type="button" value="글쓰기" id="btn_board_write" >
                                 	</div>
-                                    <form class="form-horizontal" role="form" action="/loginProcess" method="POST">
+                                    <form class="form-horizontal" role="form" action="" method="POST">
                                     	<table class="type10">
+                                    		<colgroup>
+                                    			<col width="5%">
+                                    			<col width="10%">
+                                    			<col width="*">
+                                    			<col width="15%">
+                                    		</colgroup>
 										    <thead>
 										    <tr>
 										        <th>번호</th>
@@ -75,14 +81,21 @@
 										    </tr>
 										    </thead>
 										    <tbody>
-										    <c:forEach items="${list}" var="list" varStatus="status">
-											    <tr>
-											        <th scope="row">${status.count}</th>
-											        <td>${list.user_id}</td>
-											        <td>${list.board_title}</td>
-											        <td>2019-07-30 12:53</td>
-											    </tr>
-										    </c:forEach>
+										    <c:if test="${!empty boardList}">
+											    <c:forEach items="${boardList}" var="list" varStatus="status">
+												    <tr>
+												        <th scope="row">${status.count}</th>
+												        <td>${list.user_id}</td>
+												        <td><a href="/boardWrite?board_id=${list.id}">${list.board_title}</a></td>
+												        <td><tf:formatDateTime value="${list.reg_dt}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+												    </tr>
+											    </c:forEach>
+										    </c:if>
+										    <c:if test="${empty boardList}">
+										    	<tr>
+										    		<td colspan="4" align="center">게시글이 없습니다.</td>
+										    	</tr>
+										    </c:if>
 										    </tbody>
 										</table>
                                     </form>                    

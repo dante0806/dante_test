@@ -14,7 +14,7 @@ var signup = {
     save : function () {
     	
         var data = {
-            username: $('#username').val(),
+            username: $('#username').val()
         };
 
 		//아이디 중복체크 
@@ -36,7 +36,6 @@ var signup = {
         	alert("에러발생! 관리자에게 문의하세요.");
 		});		
     }
-
 };
 
 signup.init();

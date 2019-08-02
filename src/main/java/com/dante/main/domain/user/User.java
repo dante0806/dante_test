@@ -14,12 +14,14 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import com.dante.main.domain.common.BaseTimeEntity;
+
 import lombok.Data;
  
 @Entity
 @Table(name = "user")
 @Data
-public class User {
+public class User extends BaseTimeEntity{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

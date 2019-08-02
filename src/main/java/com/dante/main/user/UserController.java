@@ -83,7 +83,6 @@ public class UserController {
 		if(user!=null){
 			check_user = false;
 		}
-		System.out.println("check_user  >>> "+check_user);
 		return check_user;
 	} 
   

@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
+
+import com.dante.main.domain.common.BaseTimeEntity;
 
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="board")
 @Data
-public class Board {
+public class Board extends BaseTimeEntity{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -26,6 +29,7 @@ public class Board {
 	@Column(length= 500, nullable = false)
 	private String board_title;
 	
+	@Lob
 	@Column(columnDefinition = "TEXT", nullable = false)
 	private String board_content;
 	

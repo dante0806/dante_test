@@ -1,7 +1,10 @@
 package com.dante.main.develop.board;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.dante.main.domain.board.Board;
 import com.dante.main.domain.board.BoardRepository;
@@ -13,14 +16,24 @@ public class BoardServiceImpl implements BoardService{
 	private BoardRepository boardRepository;
 	
 	@Override
-	public void saveBoard(Board board) {		
+	public void insertBoard(Board board) {		
 		boardRepository.save(board);
 	}
 
-	/*@Override
-	public Board findByBoard_id(Long board_id) {
-		return boardRepository.findByBoard_id(board_id);
-	}*/
+	@Override
+	public List<Board> getBoardList() {
+		return boardRepository.findAll();
+	}
+	
+	@Transactional
+	@Override
+	public void updateBoard(Board board){
+		boardRepository.update(board);
+	}
 
-		
+	@Override
+	public void deleteBoard(Long id){
+		boardRepository.deleteById(id);
+	}
+	
 }
