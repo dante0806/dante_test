@@ -62,10 +62,11 @@ public class BoardController {
 	//게시물 수정
 	@ResponseBody
 	@PostMapping("/modifyBoard")
-	public ModelAndView modifyBoard(@ModelAttribute("boardForm") Board board){
+//	public ModelAndView modifyBoard(@ModelAttribute("boardForm") Board board){
+	public ModelAndView modifyBoard(@RequestBody Map<String, Object> param){
 		
 		ModelAndView mv = new ModelAndView();
-		boardService.updateBoard(board);
+		boardService.updateBoard(param);
 		mv.setViewName("redirect:/boardList");
 		return mv;
 	}

@@ -1,6 +1,7 @@
 package com.dante.main.develop.board;
 
 import java.util.List;
+import java.util.Map;
 
 import com.dante.main.domain.board.Board;
 
@@ -10,7 +11,7 @@ public interface BoardService {
 		
 		void insertBoard(Board board);
 		
-		void updateBoard(Board board);
+		void updateBoard(Map<String, Object> param);
 		
 		void deleteBoard(Long id);
 }

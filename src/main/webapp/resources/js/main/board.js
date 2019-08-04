@@ -16,6 +16,7 @@ var board = {
 		$("#btn_reg_board").on('click', function(){
 			if(check_field()){
 				if(confirm('등록하시겠습니까?')){
+					$("#boardForm").attr("action","/regBoard");
 					$("#boardForm").submit();
 				}
 			}
@@ -25,12 +26,12 @@ var board = {
 		$("#btn_modify_board").on('click',function(){
 			if(check_field()){
 				if(confirm('수정하시겠습니까?')){
+					
 					var data = {
 			            board_title: $('#board_title').val(),
 			            board_content: $('#board_content').val(),
 			            board_id:$("#board_id").val()
 			        };
-					alert(data);
 			        $.ajax({
 			            type: 'POST',
 			            url: '/modifyBoard',

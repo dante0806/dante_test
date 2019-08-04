@@ -74,7 +74,7 @@
                                 <div align="right">
                                 	<input type="button" value="목록" id="btn_board_list">
                                 </div>
-                                    <form class="form-horizontal" name="boardForm" id="boardForm" role="form" action="/regBoard" method="POST">
+                                    <form class="form-horizontal" name="boardForm" id="boardForm" role="form" method="POST">
                                     	<input type="hidden" name="user_id" id="user_id" 
                                     		value="<sec:authorize access="isAuthenticated()">
                                     						<sec:authentication property='principal.username'/>

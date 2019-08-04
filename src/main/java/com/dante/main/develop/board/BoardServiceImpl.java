@@ -1,6 +1,7 @@
 package com.dante.main.develop.board;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,11 @@ public class BoardServiceImpl implements BoardService{
 	
 	@Transactional
 	@Override
-	public void updateBoard(Board board){
+	public void updateBoard(Map<String, Object> param){
+		Board board = new Board();
+		board.setId(Long.parseLong(String.valueOf(param.get("board_id"))));
+		board.setBoard_title(String.valueOf(param.get("board_title")));
+		board.setBoard_content(String.valueOf(param.get("board_content")));
 		boardRepository.update(board);
 	}
 
