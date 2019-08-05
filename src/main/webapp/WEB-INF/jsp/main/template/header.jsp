@@ -79,11 +79,12 @@
                                             <a href="/logout" style="margin-right: 15px;">로그아웃</a>
                                         </li>
                                         <li>
-                                            <a href="#" style="margin-right: 15px;">회원정보</a>
+                                            <a href="/myInfo" style="margin-right: 15px;">회원정보</a>
                                         </li>
                                        	<li>
 											<span  style="margin-right: 15px;">
 												<sec:authentication property="principal.username"/> 님
+												<c:set var="login_id" scope="session"><sec:authentication property='principal.username'/></c:set>
 											</span>
                                        	</li>
                                     </sec:authorize>
@@ -125,6 +126,16 @@
                                 <nav  style="z-index: 30">
                                     <ul class="navigation">
                                     	<li>
+                                            <a href="/">
+                                                <span class="label-nav">
+                                                    Home
+                                                </span>
+                                                <span class="label-nav-sub" data-hover="Main">
+                                                    Main
+                                                </span>
+                                            </a>
+                                        </li>
+                                    	<li>
                                             <a href="/boardList">
                                                 <span class="label-nav">
                                                     Develop
@@ -152,7 +163,7 @@
                                                 <li>
                                                     <a href="../resources/template/about-us.html"> About </a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <a href="../resources/template/services.html"> Services </a>
                                                 </li>
                                                 <li>
@@ -190,10 +201,10 @@
                                                 </li>                                    
                                                 <li>
                                                     <a href="../resources/template/home-version5.html">Home Version 5</a>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="../resources/template/blog.html">
                                                 <span class="label-nav">
                                                     Blog
@@ -281,7 +292,7 @@
                                                 </li>
 
                                             </ul>
-                                        </li>
+                                        </li> -->
                                     </ul>
 
                                 </nav>

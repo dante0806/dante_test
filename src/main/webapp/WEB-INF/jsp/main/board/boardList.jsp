@@ -70,24 +70,31 @@
                                     			<col width="5%">
                                     			<col width="10%">
                                     			<col width="*">
-                                    			<col width="15%">
+                                    			<col width="18%">
                                     		</colgroup>
 										    <thead>
 										    <tr>
 										        <th>번호</th>
 										        <th>작성자</th>
 										        <th>제목</th>
-										        <th>등록일시</th>
+										        <th>등록일시 (마지막 수정일시)</th>
 										    </tr>
 										    </thead>
 										    <tbody>
 										    <c:if test="${!empty boardList}">
 											    <c:forEach items="${boardList}" var="list" varStatus="status">
 												    <tr>
-												        <th scope="row">${status.count}</th>
-												        <td>${list.user_id}</td>
-												        <td><a href="/boardWrite?board_id=${list.id}">${list.board_title}</a></td>
-												        <td><tf:formatDateTime value="${list.reg_dt}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+												        <th scope="row" align="center">${status.count}</th>
+												        <td align="center">${list.user_id}</td>
+												        <td style="padding-left: 40px;"><a href="/boardWrite?board_id=${list.id}">${list.board_title}</a></td>
+												        <td align="center">
+												        	<c:if test="${list.reg_dt == list.upd_dt}">
+													        	<tf:formatDateTime value="${list.reg_dt}" pattern="yyyy-MM-dd HH:mm:ss"/>
+												        	</c:if>
+												        	<c:if test="${list.reg_dt != list.upd_dt}">
+												        		<tf:formatDateTime value="${list.upd_dt}" pattern="yyyy-MM-dd HH:mm:ss"/>
+												        	</c:if>
+												        </td>
 												    </tr>
 											    </c:forEach>
 										    </c:if>
