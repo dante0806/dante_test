@@ -81,24 +81,39 @@
 										    </tr>
 										    </thead>
 										    <tbody>
-										    <c:if test="${!empty boardList}">
-											    <c:forEach items="${boardList}" var="list" varStatus="status">
+										    <c:if test="${!empty boardPage.content}">
+											    <c:forEach items="${boardPage.content}" var="boardPage" varStatus="status">
 												    <tr>
 												        <th scope="row" align="center">${status.count}</th>
-												        <td align="center">${list.user_id}</td>
-												        <td style="padding-left: 40px;"><a href="/boardWrite?board_id=${list.id}">${list.board_title}</a></td>
+												        <td align="center">${boardPage.user_id}</td>
+												        <td style="padding-left: 40px;"><a href="/boardWrite?board_id=${boardPage.id}">${boardPage.board_title}</a></td>
 												        <td align="center">
-												        	<c:if test="${list.reg_dt == list.upd_dt}">
-													        	<tf:formatDateTime value="${list.reg_dt}" pattern="yyyy-MM-dd HH:mm:ss"/>
+												        	<c:if test="${boardPage.reg_dt == boardPage.upd_dt}">
+													        	<tf:formatDateTime value="${boardPage.reg_dt}" pattern="yyyy-MM-dd HH:mm:ss"/>
 												        	</c:if>
-												        	<c:if test="${list.reg_dt != list.upd_dt}">
-												        		<tf:formatDateTime value="${list.upd_dt}" pattern="yyyy-MM-dd HH:mm:ss"/>
+												        	<c:if test="${boardPage.reg_dt != boardPage.upd_dt}">
+												        		<tf:formatDateTime value="${boardPage.upd_dt}" pattern="yyyy-MM-dd HH:mm:ss"/>
 												        	</c:if>
 												        </td>
 												    </tr>
 											    </c:forEach>
+											    
+											    <!-- 페이지 버튼 -->
+											    <ul class="pager">
+													<c:if test="${!boardPage.first}">
+													<li class="previous">
+														<a href="?page=${boardPage.number-1}">&larr; 이전 글</a>
+													</li>
+													</c:if>
+													<c:if test="${!boardPage.last}">
+													<li class="next">
+														<a href="?page=${boardPage.number+1}">다음 글 &rarr;</a>
+													</li>
+													</c:if>
+												</ul>
+												
 										    </c:if>
-										    <c:if test="${empty boardList}">
+										    <c:if test="${empty boardPage.content}">
 										    	<tr>
 										    		<td colspan="4" align="center">게시글이 없습니다.</td>
 										    	</tr>

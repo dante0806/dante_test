@@ -7,6 +7,10 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -35,10 +39,11 @@ public class BoardController {
 	
 	//게시물 리스트 페이지
 	@GetMapping("/boardList")
-	public ModelAndView boardList(){
+	public ModelAndView boardList(@PageableDefault(sort = {"id"}, direction = Direction.DESC, size=2) final Pageable pageable ){
 		ModelAndView mv = new ModelAndView();
-		List<Board> boardList = boardRepository.findAll();
-		mv.addObject("boardList", boardList);
+		Page<Board> boardPage = boardRepository.findAll(pageable);
+		System.out.println("boardPage >>>" + boardPage);
+		mv.addObject("boardPage", boardPage);
 		mv.setViewName("main/board/boardList");
 		return mv;
 	}
