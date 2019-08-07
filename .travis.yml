@@ -9,13 +9,13 @@ branches:
 
 # Travis CI 서버의 Home
 
-before_install:
-  - chmod +x mvnw
-
 cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
+
+before_script: 
+  - chmod a+x ./mvnw
 
 script: "./gradlew clean build"
 
