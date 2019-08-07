@@ -15,6 +15,12 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'	//jar배포시(default) 스프링부트에선 jsp 지원안함. -> 스프링부트1.4 이상에선 war로 배포하면 해결.
+
+war {
+	baseName = 'gradle'
+	version = '0.0.1'
+}
 
 group = 'com.dante'
 version = '0.0.1-SNAPSHOT'
