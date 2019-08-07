@@ -1,4 +1,6 @@
 language: java
+before_install:
+  - chmod +x mvnw
 jdk:
   - openjdk8
 
@@ -19,7 +21,3 @@ notifications:
   email:
     recipients:
       - dante0806@naver.com 
-
-dependencies:
-    override:
-      - chmod +x gradlew
