@@ -9,13 +9,14 @@ branches:
 
 # Travis CI 서버의 Home
 
-before_install:
-  - chmod +x mvnw
-
 cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
+
+# VV permission denied error 해결!!(한참해멤)
+before_script: 
+  - chmod +x mvnw
 
 script: "./gradlew clean build"
 

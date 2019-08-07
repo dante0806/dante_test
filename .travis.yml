@@ -14,8 +14,9 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-before_script: 
-  - chmod a+x ./mvnw
+# VV permission denied error 해결!!(한참해멤)
+before_install: 
+  - chmod +x mvnw
 
 script: "./gradlew clean build"
 
