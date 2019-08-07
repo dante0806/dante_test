@@ -19,3 +19,7 @@ notifications:
   email:
     recipients:
       - dante0806@naver.com 
+
+dependencies:
+    override:
+        - chmod +x gradlew
