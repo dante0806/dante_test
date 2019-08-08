@@ -6,67 +6,9 @@
 <jsp:include page="../template/header.jsp"></jsp:include>
 <html class="no-js">
 	<style type="text/css">
-		table.type11 {
-		    border-collapse: separate;
-		    border-spacing: 1px;
-		    text-align: center;
-		    line-height: 1.5;
-		    margin: 20px 10px;
-		}
-		table.type11 th {
-		    padding: 10px;
-		    font-weight: bold;
-		    vertical-align: middle;
-		    text-align:center;
-		    color: #fff;
-		    background: #3399CC ;
-		}
-		table.type11 td {
-		    padding: 10px;
-		    vertical-align: top;
-		    border-bottom: 1px solid #ccc;
-		    background: #eee;
-		}
-		input.text {
-		    font-size: 9pt;
-		    text-align: left;
-		    border: 1 solid #acacac;
-		    background-color: #ffffff;
-		    font-family: DOTUM;
-		    color: #303030;
-		}
-		.input {
-		    height: 24px;
-		    border-radius: 2px;
-		    border: 1px solid #929292;
-		    margin: 3px 0px;
-		}
-		table.type12 {
-		    border-collapse: collapse;
-		    line-height: 1.5;
-		    border-top: 1px solid #ccc;
-		    border-bottom: 1px solid #ccc;
-		    margin: 20px 10px;
-		}
-		table.type12 thead th {
-			text-align: center;
-		    padding: 10px;
-		    font-weight: bold;
-		    vertical-align: top;
-		    color: #fff;
-		    background: #3399CC;
-		    margin: 20px 10px;
-		}
-		table.type12 tbody th {
-		    padding: 10px;
-		}
-		table.type12 td {
-		    padding: 10px;
-		    vertical-align: top;
-		}
-		table.type12 .even {
-		    background: #CCFFCC;
-		}
+		
+		
+		
 	</style>
 	<script type="text/javascript">
 	</script>
@@ -78,6 +20,34 @@
                     <div class="double-bounce2"></div>
                 </div>
             </div>
+            
+            <div class="top-title-wrapper">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="col-md-12 col-sm-12">
+                        	<div class="page-info">
+                            	<h1 class="h1-page-title">게시판</h1>
+								<h2 class="h2-page-desc">글쓰기</h2>
+									
+                                <!-- BreadCrumb -->
+                                <div class="breadcrumb-container">
+                                	<ol class="breadcrumbs">
+                                    	<li>
+                                        	<a href="/">Home</a>
+                                        </li>
+                                        <li>
+                                        	<a href="/boardList">글목록</a>
+                                        </li>
+                                        <li class="active">글쓰기</li>
+                                    </ol>
+                                </div>
+                                <!-- BreadCrumb -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
             <div class="content-wrapper hide-until-loading">
             	<div class="body-wrapper">
             		<div class="container">

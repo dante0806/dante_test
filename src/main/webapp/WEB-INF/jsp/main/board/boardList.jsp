@@ -4,34 +4,6 @@
 <!DOCTYPE html>
 <jsp:include page="../template/header.jsp"></jsp:include>
 <html class="no-js">
-	<style type="text/css">
-		table.type10 {
-		    border-collapse: collapse;
-		    line-height: 1.5;
-		    border-top: 1px solid #ccc;
-		    border-bottom: 1px solid #ccc;
-		    margin: 20px 10px;
-		}
-		table.type10 thead th {
-			text-align: center;
-		    padding: 10px;
-		    font-weight: bold;
-		    vertical-align: top;
-		    color: #fff;
-		    background: #3399CC;
-		    margin: 20px 10px;
-		}
-		table.type10 tbody th {
-		    padding: 10px;
-		}
-		table.type10 td {
-		    padding: 10px;
-		    vertical-align: top;
-		}
-		table.type10 .even {
-		    background: #CCFFCC;
-		}
-	</style>
 	<script type="text/javascript">
 	</script>
     <body>
@@ -42,6 +14,33 @@
                     <div class="double-bounce2"></div>
                 </div>
             </div>
+            <div class="top-title-wrapper">
+                <div class="container">
+                	<div class="row">
+                    	<div class="col-md-12 col-sm-12">
+                        	<div class="page-info">
+                            	<h1 class="h1-page-title">게시판</h1>
+                                <h2 class="h2-page-desc">글목록</h2>
+                                    
+                                <!-- BreadCrumb -->
+                                <div class="breadcrumb-container">
+                                	<ol class="breadcrumbs">
+                                    	<li>
+                                        	<a href="/">Home</a>
+                                        </li>
+                                        <li class="active">글목록</li>
+                                        <li>
+                                        	<a href="/boardWrite?board_id=">글쓰기</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!-- BreadCrumb -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="content-wrapper hide-until-loading">
             	<div class="body-wrapper">
             		<div class="container">

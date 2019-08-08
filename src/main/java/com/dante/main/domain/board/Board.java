@@ -18,12 +18,12 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name="board")
 @Data
+@Table(name="board")
 public class Board extends BaseTimeEntity{
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column(length= 500, nullable = false)

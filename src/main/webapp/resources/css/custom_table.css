@@ -1,0 +1,321 @@
+/*   https://nanati.me/html_css_table_design  참고   */
+
+/* 외곽선만사용 */
+table.type01 { 	
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    margin : 20px 10px;
+}
+table.type01 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border: 1px solid #ccc;
+}
+table.type01 td {
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+}
+
+/* 항목에만 배경색 입히기 + 입체형 */
+table.type02 {
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  	margin : 20px 10px;
+}
+table.type02 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    background: #eee;
+}
+table.type02 td {
+    padding: 10px;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 테이블 왼쪽 선을 굵게 */
+table.type03 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-left: 3px solid #369;
+  	margin : 20px 10px;
+}
+table.type03 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #153d73;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+table.type03 td {
+    padding: 10px;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 줄노트 디자인 */
+table.type04 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+  	margin : 20px 10px;
+}
+table.type04 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+table.type04 td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 줄노트 디자인 + 항목명에 배경색 넣기 */
+table.type05 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin: 20px 10px;
+}
+table.type05 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+    background: #cdecfa;
+    text-align: center;
+}
+table.type05 td {
+    padding: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 짝수 행에만 배경색 넣기 */
+table.type06 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 10px;
+}
+table.type06 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+}
+table.type06 td {
+    padding: 10px;
+    vertical-align: top;
+}
+table.type06 .even {
+    background: #efefef;
+}
+
+/* 2way 헤더 기본형 */
+table.type07 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    margin: 20px 10px;
+}
+table.type07 thead {
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background: #e7708d;
+}
+table.type07 thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+}
+table.type07 tbody th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #fcf1f4;
+}
+table.type07 td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 2way 헤더 + 라인으로 포인트주기 01 */
+table.type08 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-left: 1px solid #ccc;
+    margin: 20px 10px;
+}
+
+table.type08 thead th {
+    padding: 10px;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 2px solid #c00;
+    background: #dcdcd1;
+}
+table.type08 tbody th { 
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #ececec;
+}
+table.type08 td {
+    padding: 10px;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 2way 헤더 + 라인으로 포인트주기 02 */
+table.type09 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+}
+table.type09 thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;
+}
+table.type09 tbody th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+table.type09 td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 2way 헤더 + 짝수행에 배경색 넣기 */
+table.type10 {
+    border-collapse: collapse;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 10px;
+}
+table.type10 thead th {
+	text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #3399CC;
+    margin: 20px 10px;
+}
+table.type10 tbody th {
+    padding: 10px;
+}
+table.type10 td {
+    padding: 10px;
+    vertical-align: top;
+}
+table.type10 .even {
+    background: #CCFFCC;
+}
+
+/* 1way 헤더 */
+table.type11 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+}
+table.type11 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align:center;
+    color: #fff;
+    background: #3399CC ;
+}
+table.type11 td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+
+/* original custom - by sieun*/
+table.type12 {
+    border-collapse: collapse;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 10px;
+}
+table.type12 thead th {
+	text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #3399CC;
+    margin: 20px 10px;
+}
+table.type12 tbody th {
+    padding: 10px;
+}
+table.type12 td {
+    padding: 10px;
+    vertical-align: top;
+}
+table.type12 .even {
+    background: #CCFFCC;
+}
+
+/* input-text */
+input.text {
+    font-size: 9pt;
+    text-align: left;
+    border: 1 solid #acacac;
+    background-color: #ffffff;
+    font-family: DOTUM;
+    color: #303030;
+}
+.input {
+    height: 28px;
+    border-radius: 2px;
+    border: 1px solid #929292;
+    margin: 3px 0px;
+}

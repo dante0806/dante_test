@@ -25,6 +25,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../resources/template/css/color-chooser.css">
+        <link rel="stylesheet" href="../resources/css/custom_table.css">
     </head>
     <body>
         <div id="wrapper"  >
@@ -147,6 +148,9 @@
                                             <ul>
                                                 <li>
                                                     <a href="/boardList">Board</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/photoList">Photo</a>
                                                 </li>                            
                                             </ul>
                                         </li>

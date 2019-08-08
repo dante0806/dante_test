@@ -17,14 +17,16 @@ import javax.persistence.Table;
 import com.dante.main.domain.common.BaseTimeEntity;
 
 import lombok.Data;
+import lombok.Getter;
  
+@Getter
 @Entity
-@Table(name = "user")
 @Data
+@Table(name = "user")
 public class User extends BaseTimeEntity{
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column(name="user_id")

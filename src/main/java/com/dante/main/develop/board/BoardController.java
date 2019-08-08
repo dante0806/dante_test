@@ -42,7 +42,6 @@ public class BoardController {
 	public ModelAndView boardList(@PageableDefault(sort = {"id"}, direction = Direction.DESC, size=2) final Pageable pageable ){
 		ModelAndView mv = new ModelAndView();
 		Page<Board> boardPage = boardRepository.findAll(pageable);
-		System.out.println("boardPage >>>" + boardPage);
 		mv.addObject("boardPage", boardPage);
 		mv.setViewName("main/board/boardList");
 		return mv;
