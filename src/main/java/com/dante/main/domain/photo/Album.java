@@ -8,10 +8,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
 @Entity
+@Data
 @Table(name="album")
 public class Album {
 

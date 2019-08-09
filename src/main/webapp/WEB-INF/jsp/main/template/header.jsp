@@ -90,7 +90,8 @@
                                        	</li>
                                     </sec:authorize>
                                     </ul>
-
+                                    <input type="hidden" id="login_id" 
+                                    		value="<sec:authorize access="isAuthenticated()"><sec:authentication property='principal.username'/></sec:authorize>">
                                 </div>
                             </div>
                         </div>

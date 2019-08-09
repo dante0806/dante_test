@@ -64,137 +64,134 @@
 	                            </div>
 	                        </div>
 	                    </div>
-					<form name="photoForm" id="photoForm" method="post">	
-                        <div class="space-sep40"></div>
-                        <div class="row">
-                            <!--  Image or video or slider -->
-                            <div class="col-md-12 col-sm-12">
-								<c:if test="${!empty photo}">
-	                                <div class="portfolio-single-image cycle-slideshow"
-	                                     data-cycle-slides="> .slider-img"
-	                                     data-cycle-swipe="true"
-	                                     data-cycle-prev=".cycle-prev"
-	                                     data-cycle-next=".cycle-next"
-	                                     data-cycle-timeout=0>
-	                                    <div class="fa fa-chevron-right cycle-next"></div>
-	                                    <div class="fa fa-chevron-left cycle-prev"></div>
-	                                    <div class="cycle-pager"></div>
-	                                    <!-- slider item -->
-	                                    <div class="slider-img">
-	                                        <img src="../resources/template/images/placeholders/portfolio-single1.jpg" alt=""/>
-	                                    </div>
-	                                    <!-- //slider item// -->
-	                                    <!-- slider item -->
-	                                    <div class="slider-img">
-	                                        <img src="../resources/template/images/placeholders/portfolio-single2.jpg" alt=""/>
-	                                    </div>
-	                                    <!-- //slider item// -->
+	                    
+						<form name="photoForm" id="photoForm" method="post" action="/regPhoto" enctype="multipart/form-data">	
+	                        <div class="space-sep40"></div>
+	                        <div class="row">
+	                            <!--  Image or video or slider -->
+	                            <div class="col-md-12 col-sm-12">
+									<c:if test="${!empty photo}">
+		                                <div class="portfolio-single-image cycle-slideshow"
+		                                     data-cycle-slides="> .slider-img"
+		                                     data-cycle-swipe="true"
+		                                     data-cycle-prev=".cycle-prev"
+		                                     data-cycle-next=".cycle-next"
+		                                     data-cycle-timeout=0>
+		                                    <div class="fa fa-chevron-right cycle-next"></div>
+		                                    <div class="fa fa-chevron-left cycle-prev"></div>
+		                                    <div class="cycle-pager"></div>
+		                                    <!-- slider item -->
+		                                    <div class="slider-img">
+		                                        <img src="../resources/template/images/placeholders/portfolio-single1.jpg" alt=""/>
+		                                    </div>
+		                                    <!-- //slider item// -->
+		                                    <!-- slider item -->
+		                                    <div class="slider-img">
+		                                        <img src="../resources/template/images/placeholders/portfolio-single2.jpg" alt=""/>
+		                                    </div>
+		                                    <!-- //slider item// -->
+		                                </div>
+		                            	<!--// Image or video or slider //-->
+		                            </c:if>
+		                            <c:if test="${empty photo}">
+		                            	<div align="center">이미지</div>
+		                            </c:if>
+	                            </div>
+	                        </div>
+	
+	                        <div class="row">
+	                            <div class="col-md-8 col-sm-8">
+	                                <!-- Project Description -->
+	                                <div class="title-block clearfix">
+	                                    <h3 class="h3-body-title">앨범</h3>
+	                                    <div class="title-seperator"></div>
 	                                </div>
-	                            	<!--// Image or video or slider //-->
-	                            </c:if>
-	                            <c:if test="${empty photo}">
-	                            	<div align="center">이미지</div>
-	                            </c:if>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <!-- Project Description -->
-                                <div class="title-block clearfix">
-                                    <h3 class="h3-body-title">앨범</h3>
-                                    <div class="title-seperator"></div>
-                                </div>
-                                <c:if test="${!empty photo}">
-	                                <p>${photo.field_name1}</p>
-	                                <p>${photo.photo_title}</p>
-	                                <blockquote>${photo.photo_content}</blockquote>
-	                                <blockquote>${photo.reg_id} / ${photo.reg_dt}</blockquote>
-                                </c:if>                
-                                <c:if test="${empty photo}">
-	                                <table class="type05">
-	                                	<tr>
-	                                		<th align="center">파일선택</th>
-	                                		<td>
-			                                	<input type="file" class="btn btn-default">
-	                                		</td>
-	                                	</tr>
-	                                	<tr>
-	                                		<th align="center">앨범선택</th>
-	                                		<td>
-	                                			<c:if test="${!empty albumList}">
-		                                			<select name="album_id" id="album_id">
-		                                				<c:forEach items="${albumList}" var="album">
-					                                		<option value="${album.album_id}">${album.album_name}</option>
-		                                				</c:forEach>
-		                                			</select>
-	                                			</c:if>
-	                                			<c:if test="${empty albumList}">
-	                                				우측에서 새앨범을 추가하세요. 
-	                                			</c:if>
-	                                		</td>
-	                                	</tr>	                                		                                	
-	                                	<tr>
-	                                		<th align="center">사진제목</th>
-	                                		<td>
-			                                	<input type="text">
-	                                		</td>
-	                                	</tr>
-	                                	<tr>
-	                                		<th align="center">사진내용</th>
-	                                		<td>
-			                                	<textarea rows="3" cols="10">
-	                                			</textarea>	
-	                                		</td>
-	                                	</tr>
-	                                </table>
-                                </c:if>
-                                <!-- //Project Description// -->
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="title-block clearfix">
-                                    <h3 class="h3-body-title">파일</h3>
-                                    <div class="title-seperator"></div>
-                                </div>
-                                <c:if test="${!empty photo}">                
-	                                <table class="portfolio-single-project-details">
-	                                    <tr>
-	                                        <th>파일이름</th>
-	                                        <td>abc.jpg</td>
-	                                    </tr>
-	                                    <tr>
-	                                        <th>파일용량</th>
-	                                        <td>100kb</td>
-	                                    </tr>
-	                                    <tr>
-	                                        <th>등록자</th>
-	                                        <td>김시은</td>
-	                                    </tr>
-	                                    <tr>
-	                                        <th>등록일</th>
-	                                        <td>2019-08-08</td>
-	                                    </tr>
-	                                </table>
-	                        	</c:if>
-	                        	<c:if test="${empty photo}">
-	                        		<div>
-	                        			앨범추가 : 
-	                        			<input type="text" id="add_album_name">
-	                                	<input type="button" id="btn_add_album" value="추가">
-	                        		</div>
-	                        		<div>
-	                        			<input type="button" value="사진저장">
-	                        		</div>
-	                        	</c:if>        
-                            </div>
-                        </div>
-					</form>
-					
-					
-					
-					
+	                                <c:if test="${!empty photo}">
+		                                <p>${photo.field_name1}</p>
+		                                <p>${photo.photo_title}</p>
+		                                <blockquote>${photo.photo_content}</blockquote>
+		                                <blockquote>${photo.reg_id} / ${photo.reg_dt}</blockquote>
+	                                </c:if>                
+	                                <c:if test="${empty photo}">
+		                                <table class="type05">
+		                                	<tr>
+		                                		<th align="center">파일선택</th>
+		                                		<td>
+				                                	<input type="file" class="btn btn-default" name="file" id="file">
+		                                		</td>
+		                                	</tr>
+		                                	<tr>
+		                                		<th align="center">앨범선택</th>
+		                                		<td>
+		                                			<c:if test="${!empty albumList}">
+			                                			<select name="album_id" id="album_id">
+			                                				<c:forEach items="${albumList}" var="albumList">
+						                                		<option value="${albumList.id}">${albumList.album_name}</option>
+			                                				</c:forEach>
+			                                			</select>
+		                                			</c:if>
+		                                			<c:if test="${empty albumList}">
+		                                				우측에서 새앨범을 추가하세요. 
+		                                			</c:if>
+		                                		</td>
+		                                	</tr>	                                		                                	
+		                                	<tr>
+		                                		<th align="center">사진제목</th>
+		                                		<td>
+				                                	<input type="text" name="photo_title" id="photo_title">
+		                                		</td>
+		                                	</tr>
+		                                	<tr>
+		                                		<th align="center">사진내용</th>
+		                                		<td>
+				                                	<textarea rows="3" cols="10" name="photo_content" id="photo_content">
+		                                			</textarea>	
+		                                		</td>
+		                                	</tr>
+		                                </table>
+	                                </c:if>
+	                                <!-- //Project Description// -->
+	                            </div>
+	                            <div class="col-md-4 col-sm-4">
+	                                <div class="title-block clearfix">
+	                                    <h3 class="h3-body-title">파일</h3>
+	                                    <div class="title-seperator"></div>
+	                                </div>
+	                                <c:if test="${!empty photo}">                
+		                                <table class="portfolio-single-project-details">
+		                                    <tr>
+		                                        <th>파일이름</th>
+		                                        <td>abc.jpg</td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>파일용량</th>
+		                                        <td>100kb</td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>등록자</th>
+		                                        <td>김시은</td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>등록일</th>
+		                                        <td>2019-08-08</td>
+		                                    </tr>
+		                                </table>
+		                        	</c:if>
+		                        	<c:if test="${empty photo}">
+		                        		<div>
+		                        			앨범추가 : 
+		                        			<input type="text" id="add_album_name">
+		                                	<input type="button" id="btn_add_album" value="추가">
+		                        		</div>
+		                        		<div>
+		                        			<input type="button" value="사진저장" id="btn_save_photo">
+		                        		</div>
+		                        	</c:if>        
+	                            </div>
+	                        </div>
+						</form>					
+						
                         <div class="space-sep40"></div>
-
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="title-block clearfix">

@@ -26,6 +26,17 @@ spring:
     password: 
   profiles: 
     active: local #기본환경선택
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      max-request-size: 215MB
+      ## 프로젝트내의 폴더에 업로드 파일을 설정하고 싶으면 1:처럼 
+      ## 본인 PC의 특정 dir에 업로드 하고 싶으면 2:처럼 설정. 
+      #1: location: ./uploads 
+      #2: location: /Users/pang/Documents/UPLOAD_FILES
+      location: C:/develop/images/
+        
     
 #jsp.. immediately
 server:

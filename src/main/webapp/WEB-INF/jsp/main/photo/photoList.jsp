@@ -254,7 +254,7 @@
                 </div>
             </div><!--.content-wrapper end -->
 		</div>
-		<script src="../resources/js/main/board.js"></script>
+		<script src="../resources/js/main/photo.js"></script>
     </body>
 </html>
 <jsp:include page="../template/footer.jsp"></jsp:include>
