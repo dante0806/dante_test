@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-import com.dante.main.common.FileUploadProperties;
+import com.dante.main.init.FileUploadProperties;
 
-@EnableConfigurationProperties({	//FileUploadProperties 와 yml을 연결하기 위해 사용.
-	FileUploadProperties.class
+@EnableConfigurationProperties({
+    FileUploadProperties.class
 })
 @EnableJpaAuditing		// JPA Auditing 활성화
 @SpringBootApplication

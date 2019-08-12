@@ -3,13 +3,18 @@ package com.dante.main.common;
 import java.util.Optional;
 
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
+import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.dante.main.domain.common.File;
+import com.dante.main.domain.common.UploadFile;
 
 public interface FileService {
 	
-	File storeFile(MultipartFile Mfile) throws FileUploadException;
+	UploadFile storeFile(MultipartFile Mfile) throws FileUploadException;
 	
-	Optional<File> getFile(Long id);
+	Resource loadFileAsResource(String fileName);
+	
+	Iterable<UploadFile> getFileList() throws Exception;
+	
+	Optional<UploadFile> getUploadFile(Long id) throws Exception;
 }

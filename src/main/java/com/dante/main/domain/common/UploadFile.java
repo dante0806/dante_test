@@ -11,12 +11,14 @@ import javax.persistence.Table;
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Getter
 @Entity
 @Table(name="file")
 @Data
-public class File extends BaseTimeEntity{
+public class UploadFile extends BaseTimeEntity{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -29,14 +31,13 @@ public class File extends BaseTimeEntity{
 	
 	private String file_type;
 	
-	@Lob
-	private byte[] data;
+	private String file_path_uri;
 	
 	@Builder
-	public File (String file_name, Long file_size, String file_type, byte[] data){
+	public UploadFile (String file_name, Long file_size, String file_type, String file_path_uri){
 		this.file_name = file_name;
 		this.file_size = file_size;
 		this.file_type = file_type;
-		this.data = data;
+		this.file_path_uri = file_path_uri;
 	}
 }

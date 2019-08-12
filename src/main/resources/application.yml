@@ -35,8 +35,11 @@ spring:
       ## 본인 PC의 특정 dir에 업로드 하고 싶으면 2:처럼 설정. 
       #1: location: ./uploads 
       #2: location: /Users/pang/Documents/UPLOAD_FILES
-      location: C:/develop/images/
-        
+#test:
+ #asd:true
+  
+#file:
+#  fileupload-dir: C:/Users/김시은/git/dante_test/src/main/resources/uploads
     
 #jsp.. immediately
 server:
