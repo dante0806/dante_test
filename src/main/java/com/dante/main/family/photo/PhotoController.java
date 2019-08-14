@@ -2,6 +2,7 @@ package com.dante.main.family.photo;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -47,8 +48,17 @@ public class PhotoController {
 	FileService fileService;
 	
 	@GetMapping("/photoList")
-	public ModelAndView photoList(){
+	public ModelAndView photoList() throws NumberFormatException, Exception{
 		ModelAndView mv = new ModelAndView();
+		List<Photo> photoList = photoRepository.findAll();
+		int index =0;
+		for (Photo photo : photoList) {
+			System.out.println("photoList.get(all) >> " + photoList.get(index));
+			//Optional<UploadFile> uploadFile = fileService.getUploadFile(Long.parseLong(String.valueOf(photoList.get(index).getFile_id())));
+			//System.out.println("asdasd >>> " + uploadFile.get());
+			index++;
+		}
+		mv.addObject("photoList", photoList);
 		mv.setViewName("main/photo/photoList");
 		return mv;
 	}
@@ -92,7 +102,7 @@ public class PhotoController {
 	                                .path("/downloadFile/")
 	                                .path(Mfile.getOriginalFilename())
 	                                .toUriString();
-			FileUploadResponse  test = new FileUploadResponse(fileName, fileDownloadUri, Mfile.getContentType(), Mfile.getSize());
+			new FileUploadResponse(fileName, fileDownloadUri, Mfile.getContentType(), Mfile.getSize());
 			UploadFile uploadFile = fileService.storeFile(Mfile);
 			
 			Photo photo = Photo.builder().album_id(photoForm.getAlbum_id())
@@ -109,7 +119,7 @@ public class PhotoController {
 	}
 	
 	//테스트
-	@PostMapping("/uploadFile")
+	/*@PostMapping("/uploadFile")
     public FileUploadResponse uploadFile(@RequestParam("file") MultipartFile file) {
         return null;
     }
@@ -122,7 +132,7 @@ public class PhotoController {
     @GetMapping("/downloadFile/{fileName:.+}")
     public ResponseEntity<Resource> downloadFile(@PathVariable String fileName, HttpServletRequest request){
         return null;
-    }
+    }*/
 	
 	
 }

@@ -5,15 +5,14 @@ import org.springframework.stereotype.Component;
 
 @ConfigurationProperties(prefix="file")
 public class FileUploadProperties {
-	private String uploadDir = "/src/main/resources/uploads/";
+	//private String uploadDir = "C:/Users/김시은/Desktop/images";
+	private String uploadDir = "../dante_test/src/main/webapp/upload/images";
 	 
     public String getUploadDir() {
-    	System.out.println("uploadDir >> " + uploadDir);
         return uploadDir;
     }
  
     public void setUploadDir(String uploadDir) {
-    	System.out.println("uploadDir >> " + uploadDir);
         this.uploadDir = uploadDir;
     }
 }

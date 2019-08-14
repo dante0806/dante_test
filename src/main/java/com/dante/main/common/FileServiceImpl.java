@@ -7,8 +7,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Optional;
 
-import javax.annotation.PostConstruct;
-
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -25,21 +23,13 @@ import com.dante.main.init.FileUploadProperties;
 public class FileServiceImpl implements FileService{
 	
 	private Path fileLocation;
-	
-	/*@Autowired
-    public FileServiceImpl(Path fileLocation) {
-        this.fileLocation = fileLocation;
-    }*/
 
 	@Autowired
 	private UploadFileRepository uploadfileRepository;
 	
 	@Autowired
     public FileServiceImpl(FileUploadProperties prop) throws FileUploadException {
-		System.out.println("111");
-        //this.fileLocation = fileLocation;
         this.fileLocation = Paths.get(prop.getUploadDir()).toAbsolutePath().normalize();
-        System.out.println("fileLocation >> " + this.fileLocation);
         try {
             Files.createDirectories(this.fileLocation);
         }catch(Exception e) {

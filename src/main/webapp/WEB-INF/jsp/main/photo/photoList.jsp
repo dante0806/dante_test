@@ -68,8 +68,50 @@
                                 </div>
 
                                 <div class="portfolio-items">
-
+                               	<c:if test="${!empty photoList}">
+                               		<c:forEach items="${photoList}" var="photoList">
+                               		<div class="thumb-label-item seo">
+                                        <div class="img-overlay thumb-label-item-img">
+                                            <img src="../upload/images/${photoList.uploadFile.file_name}" alt=""/>
+                                            <div class="item-img-overlay">
+                                                <a class="portfolio-zoom fa fa-plus" href="${photoList.uploadFile.file_path_uri}"
+                                                   data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
+                                                <div class="item_img_overlay_content">
+                                                    <h3 class="thumb-label-item-title">
+                                                        <a href=""> ${photoList.album.album_name}  ${photoList.photo_title} </a>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </c:forEach>
+                               	</c:if>
+                               	<c:if test="${empty photoList}">
+                               		<div class="thumb-label-item seo">
+                                        <div class="img-overlay thumb-label-item-img">	
+                               				등록된 사진이 없습니다.
+                               			</div>
+                               		</div>
+                               	</c:if>
                                     <!-- Portfolio Item -->
+                                    <!-- <div class="thumb-label-item seo">
+                                        <div class="img-overlay thumb-label-item-img">
+                                            <img
+                                                src="../resources/template/images/placeholders/portfolio1.jpg"
+                                                alt=""/>
+
+                                            <div class="item-img-overlay">
+                                                <a class="portfolio-zoom fa fa-plus" href="http://www.youtube.com/watch?v=mcw6j-QWGMo"
+                                                   data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
+                                                <div class="item_img_overlay_content">
+                                                    <h3 class="thumb-label-item-title">
+                                                        <a href=""> Aenean llus mtus </a>
+                                                    </h3>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="thumb-label-item seo">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
@@ -87,11 +129,9 @@
 
                                             </div>
                                         </div>
-
-
                                     </div>
-                                    <!-- //Portfolio Item// -->
-                                    <!-- Portfolio Item -->
+                                    //Portfolio Item//
+                                    Portfolio Item
                                     <div class="thumb-label-item branding">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
@@ -112,8 +152,8 @@
 
 
                                     </div>
-                                    <!-- //Portfolio Item// -->
-                                    <!-- Portfolio Item -->
+                                    //Portfolio Item//
+                                    Portfolio Item
                                     <div class="thumb-label-item branding">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
@@ -134,8 +174,8 @@
 
 
                                     </div>
-                                    <!-- //Portfolio Item// -->
-                                    <!-- Portfolio Item -->
+                                    //Portfolio Item//
+                                    Portfolio Item
                                     <div class="thumb-label-item videos">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
@@ -156,8 +196,8 @@
 
 
                                     </div>
-                                    <!-- //Portfolio Item// -->
-                                    <!-- Portfolio Item -->
+                                    //Portfolio Item//
+                                    Portfolio Item
                                     <div class="thumb-label-item web-design">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
@@ -178,8 +218,8 @@
 
 
                                     </div>
-                                    <!-- //Portfolio Item// -->
-                                    <!-- Portfolio Item -->
+                                    //Portfolio Item//
+                                    Portfolio Item
                                     <div class="thumb-label-item branding">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
@@ -200,8 +240,8 @@
 
 
                                     </div>
-                                    <!-- //Portfolio Item// -->
-                                    <!-- Portfolio Item -->
+                                    //Portfolio Item//
+                                    Portfolio Item
                                     <div class="thumb-label-item videos">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
@@ -222,8 +262,8 @@
 
 
                                     </div>
-                                    <!-- //Portfolio Item// -->
-                                    <!-- Portfolio Item -->
+                                    //Portfolio Item//
+                                    Portfolio Item
                                     <div class="thumb-label-item videos">
                                         <div class="img-overlay thumb-label-item-img">
                                             <img
@@ -243,7 +283,7 @@
                                         </div>
 
 
-                                    </div>
+                                    </div> -->
                                     <!-- //Portfolio Item// -->
 
 
