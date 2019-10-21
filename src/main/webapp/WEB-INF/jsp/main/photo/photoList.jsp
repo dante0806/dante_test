@@ -72,7 +72,7 @@
                                		<c:forEach items="${photoList}" var="photoList">
                                		<div class="thumb-label-item seo">
                                         <div class="img-overlay thumb-label-item-img">
-                                            <img src="../upload/images/${photoList.uploadFile.file_name}" alt=""/>
+                                            <img src="../upload/images/${photoList.uploadFile.file_name}" alt=""/ width="25%" height="200px;">
                                             <div class="item-img-overlay">
                                                 <a class="portfolio-zoom fa fa-plus" href="${photoList.uploadFile.file_path_uri}"
                                                    data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>
