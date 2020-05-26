@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+
+function select_make(){
+	var tab = $("#s_tb").val();
+	var col = $("#s_cl").val();
+	if(tab == ""){
+		alert("테이블명을 입력해 주세요.");
+		$("#s_tb").focus();
+		return false;
+	}else if(col == ""){
+		alert("컬럼을 입력해 주세요.");
+		$("#s_cl").focus();
+		return false;
+	}else{
+		var query = "";
+		var col_tf = "";
+		var col_arr = col.split("\n");
+		var col_arr_size = col_arr.length;
+		
+		//컬럼명 세팅
+		for(var i=0; i<col_arr_size; i++){
+			if(i == col_arr_size-1){
+				col_tf += col_arr[i] + "\n";
+			}else{
+				col_tf += col_arr[i] +", ";
+			}
+		}
+		
+		//기본쿼리 생성
+		query += "SELECT " +
+		         col_tf + "  FROM " +
+		         tab + "\n  WHERE 1=1 ";
+		
+		//where절 세팅
+		var cod = $("#s_cd").val();
+		if(cod != ""){
+			var cod_tf = "";
+			var cod_arr = cod.split("\n");
+			var cod_arr_size = cod_arr.length;
+			
+			for(var i=0; i<cod_arr_size; i++){
+				cod_tf += "\n    AND " + cod_arr[i];
+			}
+			query += cod_tf;
+		}
+	}
+	if(query != ""){
+		$("#select_result").html(query);
+	}
+}
+
+function insert_make_col(){
+	var col = $("#i_cl").val();
+	if(col == ""){
+		alert("컬럼을 입력해 주세요.");
+		$("#i_cl").focus();
+		return false;
+	}else{
+		var col_arr = col.split("\n");
+		var col_arr_size = col_arr.length;
+		var html = "<table id='table_i' width='800'>";
+		
+		//컬럼명 세팅
+		for(var i=0; i<col_arr_size; i++){
+			if(i%2==0){
+				html += "<tr>";
+			}
+			html += "<td width='20%' align='right'>" + col_arr[i] + " : </td>"+
+			        "<td width='30%' style='padding-right:30px;'><input type='text' id='i_col_"+i+"' size='30'></td>";
+			if(i%2==1){
+				html += "</tr>"
+			}
+		}
+		html += "</table>";
+		$("#i_c_d").html(html);
+	}
+}
+
+function insert_make(){
+	var tab = $("#i_tb").val();
+	var col = $("#i_cl").val();
+	if(tab == ""){
+		alert("테이블명을 입력해 주세요.");
+		$("#i_tb").focus();
+		return false;
+	}else if(col == ""){
+		alert("컬럼을 입력해 주세요.");
+		$("#i_cl").focus();
+		return false;
+	}else{
+		var query = "";
+		var col_tf = "";
+		var values = "";
+		var col_arr = col.split("\n");
+		var col_arr_size = col_arr.length;
+		
+		//컬럼명 세팅
+		for(var i=0; i<col_arr_size; i++){
+			if(i == col_arr_size-1){
+				col_tf += col_arr[i];
+				values += $("#i_col_"+i).val();
+			}else{
+				col_tf += col_arr[i] + ", ";
+				values += $("#i_col_"+i).val() + ", ";
+			}
+		}
+		
+		//기본쿼리 생성
+		query += "INSERT INTO " + tab + " (" + col_tf + ")\n"+
+		         "     VALUES (" + values + ")";
+	}
+	if(query != ""){
+		$("#insert_result").html(query);
+	}
+}
+
+function update_make_col(){
+	var col = $("#u_cl").val();
+	if(col == ""){
+		alert("컬럼을 입력해 주세요.");
+		$("#u_cl").focus();
+		return false;
+	}else{
+		var col_arr = col.split("\n");
+		var col_arr_size = col_arr.length;
+		var html = "<table id='table_u' width='800'>";
+		
+		//컬럼명 세팅
+		for(var i=0; i<col_arr_size; i++){
+			if(i%2==0){
+				html += "<tr>";
+			}
+			html += "<td width='20%' align='right'>" + col_arr[i] + " : </td>"+
+			        "<td width='30%' style='padding-right:30px;'><input type='text' id='u_col_"+i+"' size='30'></td>";
+			if(i%2==1){
+				html += "</tr>"
+			}
+		}
+		html += "</table>";
+		$("#u_c_d").html(html);
+	}
+}
+
+function update_make(){
+	var tab = $("#u_tb").val();
+	var col = $("#u_cl").val();
+	if(tab == ""){
+		alert("테이블명을 입력해 주세요.");
+		$("#u_tb").focus();
+		return false;
+	}else if(col == ""){
+		alert("컬럼을 입력해 주세요.");
+		$("#u_cl").focus();
+		return false;
+	}else{
+		var query = "";
+		var col_tf = "";
+		var col_arr = col.split("\n");
+		var col_arr_size = col_arr.length;
+		
+		//컬럼명 세팅
+		for(var i=0; i<col_arr_size; i++){
+			if(i == 0){
+				col_tf += col_arr[i] + " = " + $("#u_col_"+i).val() + ", \n";
+			}else if(i == col_arr_size-1){
+				col_tf += "       " + col_arr[i] + " = " + $("#u_col_"+i).val();
+			}else{
+				col_tf += "       " + col_arr[i] + " = " + $("#u_col_"+i).val() + ", \n";
+			}
+		}
+		
+		//기본쿼리 생성
+		query += "UPDATE " + tab + " \n" +
+				 "   SET " + col_tf + " \n" +
+		         " WHERE 1=1 ";
+				 
+		//where절 세팅
+		var cod = $("#u_cd").val();
+		if(cod != ""){
+			var cod_tf = "";
+			var cod_arr = cod.split("\n");
+			var cod_arr_size = cod_arr.length;
+			
+			for(var i=0; i<cod_arr_size; i++){
+				cod_tf += "\n   AND " + cod_arr[i];
+			}
+			query += cod_tf;
+		}		 
+	}
+	if(query != ""){
+		$("#update_result").html(query);
+	}
+}
+
+function change_tab(num){
+	$("#section"+num).css("display","block");
+	if(num==1){			$("#section2, #section3, #section4, #section5").css("display","none");		}
+	else if(num==2){	$("#section1, #section3, #section4, #section5").css("display","none");		}
+	else if(num==3){	$("#section1, #section2, #section4, #section5").css("display","none");		}
+	else if(num==4){	$("#section1, #section2, #section3, #section5").css("display","none");		}
+	else if(num==5){	$("#section1, #section2, #section3, #section4").css("display","none");		}
+}
+
+//쿼리 문자열삭제
+function del_t_text(){
+	var text = $("#t_text").val();
+	var trans_text = text.replace(/\"\+/g," ");
+	$("#t_text").val(trans_text);
+}
+
+</script>
+<title>SQL maker</title>
+</head>
+<body>
+	<div align="left" style="margin-left: 10%">
+		<div class="title">
+			<h3>SQL Maker</h3>
+			<span> <a href="#" onclick="javascript:change_tab(1)">select</a> |</span>
+			<span> <a href="#" onclick="javascript:change_tab(2)">insert</a> |</span>
+			<span> <a href="#" onclick="javascript:change_tab(3)">update</a> |</span>
+			<span> <a href="#" onclick="javascript:change_tab(4)">delete</a> |</span>
+			<span> <a href="#" onclick="javascript:change_tab(5)">transform</a></span>
+		</div>
+		<div class="content">
+			<div class="section1" id="section1">
+				<h4>select문</h4>
+				<div class="sec1_cont">
+					<div>
+						Table : 
+						<input type="text" size="20" id="s_tb">
+					</div>
+					<div>
+						Column<br>
+						<textarea rows="5" cols="100" id="s_cl"></textarea>
+					</div>
+					<div>
+						Condition<br>
+						<textarea rows="5" cols="100" id="s_cd"></textarea>
+					</div>
+				</div>
+				<div>
+					<input type="button" value="생성" onclick="javascript:select_make()">
+				</div>
+				<hr>
+				<div>
+					<pre id="select_result"></pre>
+				</div>
+			</div>
+			<div class="section2" id="section2" style="display: none;">
+				<h4>insert문</h4>
+				<div class="sec2_cont">
+					<div>
+						Table : 
+						<input type="text" size="20" id="i_tb">
+					</div>
+					<div>
+						Column<br>
+						<textarea rows="5" cols="100" id="i_cl"></textarea>
+					</div>
+					<div>
+						<input type="button" value="컬럼값" onclick="javascript:insert_make_col()">
+					</div>
+					<div>
+						Column : Data<br>
+						<div id="i_c_d"></div>
+					</div>
+				</div>
+				<div>
+					<input type="button" value="생성" onclick="javascript:insert_make()">
+				</div>
+				<hr>
+				<div>
+					<pre id="insert_result"></pre>
+				</div>
+			</div>
+			<div class="section3" id="section3" style="display: none;">
+				<h4>update문</h4>
+				<div class="sec3_cont">
+					<div>
+						Table : 
+						<input type="text" size="20" id="u_tb">
+					</div>
+					<div>
+						Column<br>
+						<textarea rows="5" cols="100" id="u_cl"></textarea>
+					</div>
+					<div>
+						<input type="button" value="컬럼값" onclick="javascript:update_make_col()">
+					</div>
+					<div>
+						Column : Data<br>
+						<div id="u_c_d"></div>
+					</div>
+					<div>
+						Condition<br>
+						<textarea rows="5" cols="100" id="u_cd"></textarea>
+					</div>
+				</div>
+				<div>
+					<input type="button" value="생성" onclick="javascript:update_make()">
+				</div>
+				<hr>
+				<div>
+					<pre id="update_result"></pre>
+				</div>
+			</div>
+			<div class="section4" id="section4" style="display: none;">
+				<h4>delete문</h4>
+				<div class="sec4_cont">
+					<div>
+						굳이??<br>
+						메모장이나..
+					</div>
+					<textarea rows="15" cols="100" placeholder="복붙용"></textarea>
+					<textarea rows="15" cols="100" placeholder="복붙용"></textarea>
+					<textarea rows="15" cols="100" placeholder="복붙용"></textarea>
+					<textarea rows="15" cols="100" placeholder="복붙용"></textarea>	
+				</div>
+			</div>
+			<div class="section5" id="section5" style="display: none;">
+				<h4>query 문자열제거</h4>
+				<div class="sec5_cont">
+					<div>
+						<textarea rows="40" cols="120" id="t_text"></textarea>
+					</div>
+					<div>
+						<input type="text" size="40" id="del_t_text">
+						<input type="button" value="제거" onclick="javascript:del_t_text();">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

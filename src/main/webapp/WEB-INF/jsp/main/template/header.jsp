@@ -46,7 +46,11 @@
                                         E-mail: dante0806@naver.com
                                     </span>                            
                                 </div>
-
+                                <div class="mail-us top-bar-block">
+                                    <span>
+                                        <a onclick="javascript:go_query_test();" href="#">query test</a>
+                                    </span>                            
+                                </div>
                             </div>
                             <div class="col-sm-5">
 
